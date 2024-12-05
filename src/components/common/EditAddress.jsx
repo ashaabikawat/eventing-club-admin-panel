@@ -132,7 +132,7 @@ const EditAddress = ({
         <div className="w-[50%]">
           <label
             htmlFor="name"
-            className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-start text-sm font-medium text-gray-900 "
           >
             State
           </label>
@@ -151,7 +151,7 @@ const EditAddress = ({
               );
               setStateName(selectedCountry ? selectedCountry.name : "");
             }}
-            className="bg-gray-50 border border-gray-300 w-[97%] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 w-[97%] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
           >
             <option value="" disabled>
               Select State
@@ -174,7 +174,7 @@ const EditAddress = ({
         <div className="w-[48%]">
           <label
             htmlFor="name"
-            className="block mb-2  ml-[5%] text-start text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2  ml-[5%] text-start text-sm font-medium text-gray-900 "
           >
             City
           </label>
@@ -183,7 +183,7 @@ const EditAddress = ({
             name="city"
             onChange={(event) => handlerSelectCityAfterChange(event)}
             value={values.city}
-            className="bg-gray-50 border ml-4 border-gray-300 flex justify-end items-end w-[100%] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border ml-4 border-gray-300 flex justify-end items-end w-[100%] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  p-2.5 "
           >
             <option value="" disabled>
               Select City

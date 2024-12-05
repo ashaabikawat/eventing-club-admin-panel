@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-const OrganizerBreadCrumb = ({path}) => {
+const OrganizerBreadCrumb = ({ path }) => {
   return (
     <nav className="flex ">
       <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
         <li className="inline-flex items-center">
           <Link
-            to="/organizer/dashboard"
+            to="/organizer/dashboard/event"
             className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
           >
             Dashboard

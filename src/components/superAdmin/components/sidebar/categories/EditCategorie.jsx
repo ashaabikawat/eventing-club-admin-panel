@@ -399,7 +399,7 @@ export const EditCategorie = () => {
               <div className="md:col-span-2">
                 <label
                   htmlFor="name"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Category Name*
                 </label>
@@ -410,7 +410,7 @@ export const EditCategorie = () => {
                   value={values.categorieName}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {errors.categorieName && touched.categorieName ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -423,7 +423,7 @@ export const EditCategorie = () => {
               <div className="md:col-span-2 mb-4">
                 <label
                   htmlFor="artistDescription"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Category Description
                 </label>
@@ -433,7 +433,7 @@ export const EditCategorie = () => {
                   value={values.categorieDescription}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
                 />
                 {errors.categorieDescription && touched.categorieDescription ? (
                   <p className="font-Marcellus text-start text-red-900">

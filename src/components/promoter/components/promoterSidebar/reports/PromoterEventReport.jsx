@@ -473,25 +473,32 @@ const PromoterEventReport = () => {
   return (
     <div className="mt-[3%] ml-[2%] min-h-screen">
       <Toaster />
-      <Breadcrumb path={"Report"} />
+      {/* <Breadcrumb path={"Report"} /> */}
       <h1 className="text-3xl font-semibold mt-6">Report</h1>
 
-      <div className="mt-6 flex justify-between">
-        <div className="md:flex">
-          <input
-            type="text"
-            value={searchTermEvent}
-            onChange={(e) => setSearchTermEvent(e.target.value)}
-            placeholder="Search..."
-            className="border p-2 mr-4"
-          />
+      <div className="mt-6 flex items-end  justify-between">
+        <div className="flex flex-wrap gap-2  items-end ">
+          <div className="flex flex-col gap-2">
+            <label htmlFor="">Event name</label>
+            <input
+              type="text"
+              value={searchTermEvent}
+              onChange={(e) => setSearchTermEvent(e.target.value)}
+              placeholder="Search..."
+              className="border p-2 mr-4"
+            />
+          </div>
 
-          <input
-            type="date"
-            value={selectedDateEvent}
-            onChange={(e) => setSelectedDateEvent(e.target.value)}
-            className="border p-2 mr-4"
-          />
+          <div className="flex flex-col gap-2">
+            <label htmlFor="">Event date</label>
+
+            <input
+              type="date"
+              value={selectedDateEvent}
+              onChange={(e) => setSelectedDateEvent(e.target.value)}
+              className="border p-2 mr-4"
+            />
+          </div>
 
           {showResetButton ? (
             <button
@@ -564,20 +571,18 @@ const PromoterEventReport = () => {
                 id="dropdownDelay"
                 className={`absolute -right-16 md:right-0 mt-2 z-10 ${
                   nameDropDownVisible ? "" : "hidden"
-                } bg-white divide-y divide-gray-100 rounded-lg shadow w-56 dark:bg-gray-700`}
+                } bg-white divide-y divide-gray-100 rounded-lg shadow w-56 `}
               >
                 <div
-                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  className="py-2 text-sm text-gray-700 "
                   aria-labelledby="dropdownDelayButton"
                 >
                   {ticketNameFilterData.map((dates, index) => (
                     <div onClick={() => handleNameFilter(dates, index)}>
                       <li>
                         <p
-                          className={`block cursor-pointer text-start px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
-                            selectedNameIndex === index
-                              ? "bg-gray-200 dark:bg-gray-500"
-                              : ""
+                          className={`block cursor-pointer text-start px-4 py-2 hover:bg-gray-100  ${
+                            selectedNameIndex === index ? "bg-gray-200 " : ""
                           }`}
                         >
                           {dates}
@@ -590,7 +595,7 @@ const PromoterEventReport = () => {
                   <li>
                     <Link
                       onClick={() => handleNameFilter("resetAllNames", null)}
-                      className="block px-4 py-2 hover:bg-gray-100 text-start dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-gray-100 text-start "
                     >
                       Reset Filter
                     </Link>
@@ -616,10 +621,10 @@ const PromoterEventReport = () => {
                 id="dropdownDelay"
                 className={`absolute -right-16  md:right-0 mt-2 z-10 ${
                   dropdownVisible ? "" : "hidden"
-                } bg-white divide-y divide-gray-100 rounded-lg shadow w-52 dark:bg-gray-700`}
+                } bg-white divide-y divide-gray-100 rounded-lg shadow w-52 `}
               >
                 <div
-                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  className="py-2 text-sm text-gray-700 "
                   aria-labelledby="dropdownDelayButton"
                 >
                   {storeFilterDates.map((dates) => (
@@ -630,10 +635,8 @@ const PromoterEventReport = () => {
                     >
                       <li>
                         <p
-                          className={`block px-4 py-2 text-start hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
-                            selectedDate === dates._id
-                              ? "bg-gray-200 dark:bg-gray-500"
-                              : ""
+                          className={`block px-4 py-2 text-start hover:bg-gray-100  ${
+                            selectedDate === dates._id ? "bg-gray-200 " : ""
                           }`}
                         >
                           {formatDate3(dates.EventStartDate)}
@@ -646,7 +649,7 @@ const PromoterEventReport = () => {
                   <li>
                     <Link
                       onClick={() => handleDateFilter(null, "reset")}
-                      className="block px-4 py-2 text-start hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 text-start hover:bg-gray-100 "
                     >
                       Reset Filter
                     </Link>
@@ -701,14 +704,14 @@ const PromoterEventReport = () => {
                     <th scope="col" className="py-3 px-6">
                       Quantity
                     </th>
-                    <th scope="col" className=" py-3">
+                    <th scope="col" className="md:px-0 px-4 py-3">
                       Ticket Price
                     </th>
 
-                    <th scope="col" className="px-12 py-3">
+                    <th scope="col" className="md:px-12 px-4 py-3">
                       Ticket Date
                     </th>
-                    <th scope="col" className="-px-10 py-3">
+                    <th scope="col" className="md:-px-10  px-6 py-3">
                       Total amount
                     </th>
                   </tr>
@@ -727,10 +730,12 @@ const PromoterEventReport = () => {
                         >
                           {ticketData?.TicketName}
                         </th>
-                        <td className="pl-4 py-4">{ticketData?.Quantity}</td>
+                        <td className="md:pl-4 pl-8 py-4">
+                          {ticketData?.Quantity}
+                        </td>
                         <td className="pl-4 py-4">{ticketData?.TicketPrice}</td>
 
-                        <td className="w-20 py-4">
+                        <td className="w-20 py-4 md:pl-0 pl-4">
                           {ticketData?.TicketDate
                             ? new Date(
                                 ticketData.TicketDate

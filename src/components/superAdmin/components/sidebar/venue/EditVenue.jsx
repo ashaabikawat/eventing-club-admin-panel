@@ -428,7 +428,7 @@ const EditVenue = () => {
               <div className="md:col-span-2">
                 <label
                   htmlFor="name"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900"
                 >
                   Venue Name*
                 </label>
@@ -439,7 +439,7 @@ const EditVenue = () => {
                   value={values.venueName}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {errors.venueName && touched.venueName ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -452,7 +452,7 @@ const EditVenue = () => {
               <div className="md:col-span-2 mb-4">
                 <label
                   htmlFor="venueDescription"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Venue Description*
                 </label>
@@ -462,7 +462,7 @@ const EditVenue = () => {
                   value={values.venueDescription}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
                 />
                 {errors.venueDescription && touched.venueDescription ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -474,7 +474,7 @@ const EditVenue = () => {
               <div className="md:col-span-2 ">
                 <label
                   htmlFor="artistDescription"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Full Address*
                 </label>
@@ -485,7 +485,7 @@ const EditVenue = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   rows={3}
-                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
                 />
                 {errors.venueAddress && touched.venueAddress ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -513,7 +513,7 @@ const EditVenue = () => {
               <div className="md:col-span-2 ">
                 <label
                   htmlFor="artistDescription"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Map Location*
                 </label>
@@ -524,7 +524,7 @@ const EditVenue = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   rows={2}
-                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
                 />
                 {errors.venueMapLocation && touched.venueMapLocation ? (
                   <p className="font-Marcellus text-start text-red-900">

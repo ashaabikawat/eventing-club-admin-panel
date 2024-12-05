@@ -688,7 +688,7 @@ const UpdateTicketByOrganizer = () => {
           <div className="md:w-[80%] mt-4">
             <label
               htmlFor="name"
-              className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-start text-base font-medium text-gray-900 "
             >
               Ticket Name*
             </label>
@@ -700,7 +700,7 @@ const UpdateTicketByOrganizer = () => {
               onChange={handleChange}
               onBlur={handleBlur}
               disabled
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
             {errors.ticketName && touched.ticketName ? (
               <p className="font-Marcellus text-start text-red-900">
@@ -713,7 +713,7 @@ const UpdateTicketByOrganizer = () => {
           <div className="md:w-[80%] mt-4">
             <label
               htmlFor="eventTourDescription"
-              className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-start text-base font-medium text-gray-900 "
             >
               Ticket Description*
             </label>
@@ -723,7 +723,7 @@ const UpdateTicketByOrganizer = () => {
               value={values?.ticketDescription}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
             />
             {errors.ticketDescription && touched.ticketDescription ? (
               <p className="font-Marcellus text-start text-red-900">
@@ -735,7 +735,7 @@ const UpdateTicketByOrganizer = () => {
           <div className="md:w-[80%] mt-4">
             <label
               htmlFor="name"
-              className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-start text-base font-medium text-gray-900 "
             >
               Price*
             </label>
@@ -746,7 +746,7 @@ const UpdateTicketByOrganizer = () => {
               value={values?.ticketPrice}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
             {errors.ticketPrice && touched.ticketPrice ? (
               <p className="font-Marcellus text-start text-red-900">
@@ -759,7 +759,7 @@ const UpdateTicketByOrganizer = () => {
             <div className="w-[100%] mt-4">
               <label
                 htmlFor="name"
-                className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-start text-base font-medium text-gray-900 "
               >
                 Total Quantity*
               </label>
@@ -770,7 +770,7 @@ const UpdateTicketByOrganizer = () => {
                 value={values?.ticketQuantity}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               />
               {errors.ticketQuantity && touched.ticketQuantity ? (
                 <p className="font-Marcellus text-start text-red-900">
@@ -781,7 +781,7 @@ const UpdateTicketByOrganizer = () => {
             <div className="w-[100%] mt-4">
               <label
                 htmlFor="name"
-                className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-start text-base font-medium text-gray-900 "
               >
                 Booking Max Limit*
               </label>
@@ -793,7 +793,7 @@ const UpdateTicketByOrganizer = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 disabled
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               />
               {errors.ticketMaxLimit && touched.ticketMaxLimit ? (
                 <p className="font-Marcellus text-start text-red-900">

@@ -1416,7 +1416,7 @@ const EditEventOrganizer = () => {
                                 placeholder="Select image"
                                 multiple
                                 onChange={handleFileChange}
-                                className="border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 w-full py-2 mb-4"
+                                className="border border-gray-300  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 w-full py-2 mb-4"
                               />
                             </div>
                           </div>
@@ -1550,7 +1550,7 @@ const EditEventOrganizer = () => {
                         <div className="relative">
                           <label
                             htmlFor="eventVideoUrl"
-                            className="block mb-2 relative text-black font-semibold text-lg text-start  dark:text-white"
+                            className="block mb-2 relative text-black font-semibold text-lg text-start  "
                           >
                             Add Video URL
                           </label>
@@ -1573,7 +1573,7 @@ const EditEventOrganizer = () => {
                           onBlur={handleBlur}
                           rows={2}
                           placeholder="Enter event link here"
-                          className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
                         />
                         {errors.eventVideoUrl && touched.eventVideoUrl ? (
                           <p className="font-Marcellus text-start text-red-900">
@@ -1594,7 +1594,7 @@ const EditEventOrganizer = () => {
                 <div className="md:col-span-2">
                   <label
                     htmlFor="eventname"
-                    className="block mb-2 font-semibold text-lg   text-gray-900 dark:text-white"
+                    className="block mb-2 font-semibold text-lg   text-gray-900 "
                   >
                     Event Name*
                   </label>
@@ -1605,7 +1605,7 @@ const EditEventOrganizer = () => {
                     value={values.eventname}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   />
                   {errors.eventname && touched.eventname ? (
                     <p className="font-Marcellus text-start text-red-900">
@@ -1637,7 +1637,7 @@ const EditEventOrganizer = () => {
               <div className="mt-4">
                 <label
                   htmlFor="eventDescription"
-                  className="block mb-2 text-black font-semibold text-lg text-start dark:text-white"
+                  className="block mb-2 text-black font-semibold text-lg text-start "
                 >
                   Event Description*
                 </label>
@@ -1647,7 +1647,7 @@ const EditEventOrganizer = () => {
                   value={values.eventDescription}
                   onChange={(value) => setFieldValue("eventDescription", value)}
                   // onBlur={handleBlur}
-                  className="w-full h-52 overflow-y-scroll bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="w-full h-52 overflow-y-scroll bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 "
                   theme="snow"
                   modules={{
                     toolbar: [
@@ -1768,7 +1768,7 @@ const EditEventOrganizer = () => {
               <div className="mt-4">
                 <label
                   htmlFor="eventTermsandConditions"
-                  className="block mb-2 text-black font-semibold text-lg text-start  dark:text-white"
+                  className="block mb-2 text-black font-semibold text-lg text-start  "
                 >
                   Event Terms and Conditions*
                 </label>
@@ -1780,7 +1780,7 @@ const EditEventOrganizer = () => {
                     setFieldValue("eventTermsandConditions", value)
                   }
                   // onBlur={handleBlur}
-                  className="w-full h-52 overflow-y-scroll bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="w-full h-52 overflow-y-scroll bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 "
                   theme="snow"
                   modules={{
                     toolbar: [

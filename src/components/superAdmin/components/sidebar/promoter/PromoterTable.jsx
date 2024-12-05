@@ -386,9 +386,9 @@ const PromoterTable = ({
               className="fixed  inset-0 z-50 flex justify-center items-center w-full h-full"
             >
               <div className="relative w-full max-w-2xl max-h-full md:p-0 p-6">
-                <div className="relative bg-white rounded-lg shadow dark:bg-gray-700 md:text-center p-6   ">
+                <div className="relative bg-white rounded-lg shadow md:text-center p-6   ">
                   <div className=" rounded-t ">
-                    <h3 className="text-3xl font-bold text-gray-900 dark:text-white w-full">
+                    <h3 className="text-3xl font-bold text-gray-900  w-full">
                       Reset password
                     </h3>
                     <div className="mt-8 flex flex-col justify-between md:items-center gap-6">

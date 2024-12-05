@@ -1,14 +1,12 @@
-
 import { Link } from "react-router-dom";
 
-const Breadcrumb = ({path}) => {
-
+const Breadcrumb = ({ path }) => {
   return (
-    <nav className="flex " >
+    <nav className="flex ">
       <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
         <li className="inline-flex items-center">
           <Link
-            to="/superAdmin/dashboard"
+            to="/superAdmin/dashboard/event"
             className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
           >
             Dashboard
@@ -32,7 +30,7 @@ const Breadcrumb = ({path}) => {
               />
             </svg>
             <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">
-               {path}
+              {path}
             </span>
           </div>
         </li>

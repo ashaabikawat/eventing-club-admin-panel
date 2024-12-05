@@ -461,10 +461,10 @@ const Sales = () => {
                 className="fixed  z-50 flex justify-center  w-full mt-20"
               >
                 <div className="relative w-full max-w-4xl max-h-full top-0 ">
-                  <div className="relative bg-white rounded-lg shadow dark:bg-gray-700 text-center p-6  max-h-[80vh] overflow-y-auto  ">
+                  <div className="relative bg-white rounded-lg shadow  text-center p-6  max-h-[80vh] overflow-y-auto  ">
                     <div className=" rounded-t w-full  ">
                       <div className="flex  justify-between">
-                        <h3 className="text-3xl text-left font-bold text-gray-900 dark:text-white w-full">
+                        <h3 className="text-3xl text-left font-bold text-gray-900  w-full">
                           Note
                         </h3>
                         <span
@@ -550,7 +550,7 @@ const Sales = () => {
                         {/* {reversedPayments.map((payment) => ( */}
                         {paymentModalData.map((payment) => (
                           <div className="border-b border-gray-200 py-5">
-                            <div className="flex gap-4 justify-between   w-full">
+                            <div className="flex gap-4 md:flex-row flex-col justify-between   w-full">
                               <div className="flex  flex-col w-full gap-2 items-start justify-start">
                                 {/* <label
                                   htmlFor="date"

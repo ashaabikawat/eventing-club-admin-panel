@@ -226,7 +226,7 @@ const EditPromoter = () => {
               <div className="md:col-span-2">
                 <label
                   htmlFor="promoterFullName"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Full Name
                 </label>
@@ -239,7 +239,7 @@ const EditPromoter = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter promoter full name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {/* {errors.promoterFullName && touched.promoterFullName ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -251,7 +251,7 @@ const EditPromoter = () => {
               <div className="md:col-span-2">
                 <label
                   htmlFor="organizerFullName"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   UserName
                 </label>
@@ -262,7 +262,7 @@ const EditPromoter = () => {
                   disabled
                   value={promoterData.Username}
                   placeholder="Enter promoter full name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
               </div>
 
@@ -293,7 +293,7 @@ const EditPromoter = () => {
               <div className="md:col-span-1">
                 <label
                   htmlFor="promoterEmail"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Email Id
                 </label>
@@ -306,7 +306,7 @@ const EditPromoter = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter promoter emailId "
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {/* {errors.promoterEmail && touched.promoterEmail ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -318,7 +318,7 @@ const EditPromoter = () => {
               <div className="">
                 <label
                   htmlFor="promoterPhoneNo"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Phone No.
                 </label>
@@ -331,7 +331,7 @@ const EditPromoter = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter promoter phone number "
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {/* {errors.promoterPhoneNo && touched.promoterPhoneNo ? (
                   <p className="font-Marcellus text-start text-red-900">

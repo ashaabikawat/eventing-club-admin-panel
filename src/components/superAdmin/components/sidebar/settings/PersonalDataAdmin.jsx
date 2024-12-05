@@ -312,7 +312,7 @@ const PersonalDataAdmin = () => {
               <div className="md:col-span-2">
                 <label
                   htmlFor="adminFullName"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Full Name
                 </label>
@@ -324,7 +324,7 @@ const PersonalDataAdmin = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter Admin full name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {errors.adminFullName && touched.adminFullName ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -336,7 +336,7 @@ const PersonalDataAdmin = () => {
               <div className="">
                 <label
                   htmlFor="adminPhoneNo"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Phone No.
                 </label>
@@ -348,7 +348,7 @@ const PersonalDataAdmin = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter Admin phone number "
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
                 />
                 {errors.adminPhoneNo && touched.adminPhoneNo ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -360,7 +360,7 @@ const PersonalDataAdmin = () => {
               <div className="">
                 <label
                   htmlFor="adminWhatsappNo"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Whatsapp No.
                 </label>
@@ -372,7 +372,7 @@ const PersonalDataAdmin = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter Admin phone number "
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {errors.adminWhatsappNo && touched.adminWhatsappNo ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -384,7 +384,7 @@ const PersonalDataAdmin = () => {
               <div className="md:col-span-2">
                 <label
                   htmlFor="adminEmail"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900"
                 >
                   Email Id
                 </label>
@@ -396,14 +396,14 @@ const PersonalDataAdmin = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter Admin emailId "
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
               </div>
 
               <div className="md:col-span-2">
                 <label
                   htmlFor="adminAddress"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Address
                 </label>
@@ -415,7 +415,7 @@ const PersonalDataAdmin = () => {
                   onBlur={handleBlur}
                   rows={4}
                   placeholder="Enter text here..."
-                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
                 />
                 {errors.adminAddress && touched.adminAddress ? (
                   <p className="font-Marcellus text-start text-red-900">

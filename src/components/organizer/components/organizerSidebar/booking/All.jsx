@@ -21,6 +21,7 @@ import Loading from "../../../../common/Loading";
 import { bookingStatus, limit } from "../../../../common/helper/Enum";
 import { Pagination } from "@mui/material";
 import Breadcrumb from "../../../../superAdmin/components/common/Breadcrumb";
+import OrganizerBreadCrumb from "../../organizerCommon/OrganizerBreadCrumb";
 
 const All = ({ setSelectedEventType, selectedEventType }) => {
   const tabs = [
@@ -612,7 +613,8 @@ const All = ({ setSelectedEventType, selectedEventType }) => {
     <>
       <div className="md:mt-10 mt-4 md:ml-6">
         <Toaster />
-        <Breadcrumb path={"Bookings"} />
+        {/* <Breadcrumb path={"Bookings"} /> */}
+        <OrganizerBreadCrumb path={"Bookings"} />
         <div className="w-[94%] ">
           <div className="flex justify-between">
             <h1 className="md:text-4xl text-2xl mt-5 mb-6 font-bold text-black">

@@ -191,13 +191,13 @@ Check your email for more details.
         {/* Form Information  */}
         <div>
           <form onSubmit={handleSubmit}>
-            <div className="flex flex-col md:flex-row gap-x-6 ">
+            <div className="flex flex-col md:flex-row md:gap-x-6 ">
               <div className="md:w-[60%] w-full md:mt-[2%] mt-8 h-auto">
-                <div className="w-full grid gap-6 mb-6 md:grid-cols-2">
+                <div className="w-full grid gap-2 md:gap-6 mb-6 md:grid-cols-2">
                   <div className="mt-2 md:col-span-2">
                     <label
                       htmlFor="FullName"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      className="block mb-2 text-sm font-medium text-gray-900 "
                     >
                       Full Name*
                     </label>
@@ -208,8 +208,8 @@ Check your email for more details.
                       value={values.FullName}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter here"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      placeholder="Enter Name"
                     />
                     {errors.FullName && touched.FullName ? (
                       <p className="font-Marcellus text-start text-red-900">
@@ -221,7 +221,7 @@ Check your email for more details.
                   <div className="mt-2 ">
                     <label
                       htmlFor="PhoneNo"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      className="block mb-2 text-sm font-medium text-gray-900"
                     >
                       Phone No.*
                     </label>
@@ -232,8 +232,8 @@ Check your email for more details.
                       value={values.PhoneNo}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter here"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                      placeholder="Enter Phone no."
                     />
                     {errors.PhoneNo && touched.PhoneNo ? (
                       <p className="font-Marcellus text-start text-red-900">
@@ -244,7 +244,7 @@ Check your email for more details.
                   <div className="mt-2">
                     <label
                       htmlFor="WhatsAppNo"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      className="block mb-2 text-sm font-medium text-gray-900 "
                     >
                       Is This Number a WhatsApp Number?*
                     </label>
@@ -279,7 +279,7 @@ Check your email for more details.
                       <div className="mt-2">
                         <label
                           htmlFor="WhatsAppNo"
-                          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          className="block mb-2 text-sm font-medium text-gray-900 "
                         >
                           WhatsApp No.*
                         </label>
@@ -290,7 +290,7 @@ Check your email for more details.
                           value={values.WhatsAppNo}
                           onChange={handleChange}
                           onBlur={handleBlur}
-                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                           placeholder="Enter WhatsApp number here"
                         />
                       </div>
@@ -302,7 +302,7 @@ Check your email for more details.
                   <div className="md:col-span-2">
                     <label
                       htmlFor="Email"
-                      className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                      className="block mb-2 text-start text-sm font-medium text-gray-900"
                     >
                       Email Id*
                     </label>
@@ -313,8 +313,8 @@ Check your email for more details.
                       value={values.Email}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      placeholder="Enter  emailId "
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Enter  email Id "
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     />
                     {errors.Email && touched.Email ? (
                       <p className="font-Marcellus text-start text-red-900">
@@ -351,7 +351,7 @@ Check your email for more details.
                   <div className="md:col-span-2 mb-4">
                     <label
                       htmlFor="noteDescription"
-                      className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                      className="block mb-2 text-start text-sm font-medium text-gray-900 "
                     >
                       Remark
                     </label>
@@ -362,7 +362,7 @@ Check your email for more details.
                       onChange={handleChange}
                       onBlur={handleBlur}
                       rows={3}
-                      className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
                     />
                     {errors.noteDescription && touched.noteDescription ? (
                       <p className="font-Marcellus text-start text-red-900">

@@ -1615,7 +1615,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                         }
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        className="bg-gray-100 border border-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        className="bg-gray-100 border border-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600   dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       />
                       {values.eventType == EventType.Booking &&
                       errors.bookingphonenumber &&
@@ -1721,7 +1721,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                         multiple
                         onChange={handleChangeImage}
                         accept="image/jpeg , image/png , image/jpg"
-                        className="border border-gray-300 dark:border-gray-600
+                        className="border border-gray-300 
                       rounded-md focus:outline-none focus:ring-2
                       focus:ring-blue-600 w-full py-2 mb-4"
                       />
@@ -1966,7 +1966,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                   <div className="relative">
                     <label
                       htmlFor="eventVideoUrl"
-                      className="block mb-2 relative text-black font-semibold text-lg text-start  dark:text-white"
+                      className="block mb-2 relative text-black font-semibold text-lg text-start  "
                     >
                       Add Video URL
                     </label>
@@ -1989,7 +1989,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                     onBlur={handleBlur}
                     rows={2}
                     placeholder="Enter event link here"
-                    className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
                   />
                   {errors.eventVideoUrl && touched.eventVideoUrl ? (
                     <p className="font-Marcellus text-start text-red-900">
@@ -2003,7 +2003,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                   <div className="w-[49%]">
                     <label
                       htmlFor="feeunit"
-                      className="block mb-2 font-semibold text-lg   text-gray-900 dark:text-white"
+                      className="block mb-2 font-semibold text-lg   text-gray-900 "
                     >
                       Convenience Fee Unit*
                     </label>
@@ -2013,7 +2013,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       value={values.feeunit}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     >
                       {Object.keys(ConvinienceFeeUnit).map((key) => (
                         <option key={key} value={ConvinienceFeeUnit[key]}>
@@ -2031,7 +2031,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                   <div className="w-[49%]">
                     <label
                       htmlFor="feevalue"
-                      className="block mb-2 font-semibold text-lg  w-full  text-gray-900 dark:text-white"
+                      className="block mb-2 font-semibold text-lg  w-full  text-gray-900 "
                     >
                       Convinience Fee Value*
                     </label>
@@ -2042,7 +2042,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       value={values.feevalue}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     />
                     {errors.feevalue && touched.feevalue ? (
                       <p className="font-Marcellus text-start text-red-900">
@@ -2063,7 +2063,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                 <div className="md:col-span-2">
                   <label
                     htmlFor="eventname"
-                    className="block mb-2 font-semibold text-lg   text-gray-900 dark:text-white"
+                    className="block mb-2 font-semibold text-lg   text-gray-900 "
                   >
                     Event Name*
                   </label>
@@ -2074,7 +2074,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                     value={values.eventname}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   />
                   {errors.eventname && touched.eventname ? (
                     <p className="font-Marcellus text-start text-red-900">
@@ -2138,7 +2138,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
               <div className="mt-4 ">
                 <label
                   htmlFor="eventDescription"
-                  className="block mb-2 text-black font-semibold text-lg text-start  dark:text-white"
+                  className="block mb-2 text-black font-semibold text-lg text-start  "
                 >
                   Event Description*
                 </label>
@@ -2149,7 +2149,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                   value={values.eventDescription}
                   onChange={(value) => setFieldValue("eventDescription", value)}
                   // onBlur={handleBlur}
-                  className="w-full h-52 overflow-y-scroll border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="w-full h-52 overflow-y-scroll border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 "
                   theme="snow"
                   modules={{
                     toolbar: [
@@ -2235,7 +2235,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
               <div className="mt-4 ">
                 <label
                   htmlFor="eventTermsandConditions"
-                  className="block mb-2 text-black font-semibold text-lg text-start  dark:text-white"
+                  className="block mb-2 text-black font-semibold text-lg text-start  "
                 >
                   Event Terms and Conditions*
                 </label>
@@ -2248,7 +2248,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                     setFieldValue("eventTermsandConditions", value)
                   }
                   // onBlur={handleBlur}
-                  className="w-full h-52 overflow-y-scroll border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="w-full h-52 overflow-y-scroll border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 "
                   theme="snow"
                   modules={{
                     toolbar: [

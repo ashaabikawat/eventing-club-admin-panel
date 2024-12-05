@@ -577,37 +577,44 @@ const SuperAdminReports = () => {
       <h1 className="text-3xl font-semibold mt-6">Report</h1>
 
       <div className="  mt-6 flex justify-between">
-        <div className="flex flex-wrap gap-4">
-          <input
-            type="text"
-            value={searchTermEvent}
-            onChange={(e) => setSearchTermEvent(e.target.value)}
-            placeholder="Event Name"
-            className="border p-2 mr-4"
-          />
+        <div className="flex flex-wrap gap-4 items-end">
+          <div className="flex flex-col gap-2">
+            <label htmlFor="">Event name</label>
+            <input
+              type="text"
+              value={searchTermEvent}
+              onChange={(e) => setSearchTermEvent(e.target.value)}
+              placeholder="Enter here"
+              className="border p-2 mr-4"
+            />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="">Enter date</label>
+            <input
+              type="date"
+              value={selectedDateEvent}
+              onChange={(e) => setSelectedDateEvent(e.target.value)}
+              className="border p-2 mr-4"
+            />
+          </div>
 
-          <input
-            type="date"
-            value={selectedDateEvent}
-            onChange={(e) => setSelectedDateEvent(e.target.value)}
-            className="border p-2 mr-4"
-          />
-
-          {showResetButton ? (
-            <button
-              onClick={handleReset}
-              className="bg-blue-500 text-white px-4 py-2 rounded"
-            >
-              Reset
-            </button>
-          ) : (
-            <button
-              onClick={handleSearch}
-              className="bg-blue-500  block text-white px-4 py-2 rounded"
-            >
-              Search
-            </button>
-          )}
+          <>
+            {showResetButton ? (
+              <button
+                onClick={handleReset}
+                className="bg-blue-500 text-white px-4 py-2 rounded"
+              >
+                Reset
+              </button>
+            ) : (
+              <button
+                onClick={handleSearch}
+                className="bg-blue-500  block text-white px-4 py-2 rounded"
+              >
+                Search
+              </button>
+            )}
+          </>
 
           {showReportTypeDropdown && (
             <div className="ml-4">
@@ -1115,20 +1122,18 @@ const SuperAdminReports = () => {
                   id="dropdownDelay"
                   className={`absolute left-0 mt-2 z-10 ${
                     nameDropDownVisible ? "" : "hidden"
-                  } bg-white divide-y divide-gray-100 rounded-lg shadow w-56 dark:bg-gray-700`}
+                  } bg-white divide-y divide-gray-100 rounded-lg shadow w-56 `}
                 >
                   <div
-                    className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                    className="py-2 text-sm text-gray-700 "
                     aria-labelledby="dropdownDelayButton"
                   >
                     {ticketNameFilterData.map((dates, index) => (
                       <div onClick={() => handleNameFilter(dates, index)}>
                         <li>
                           <p
-                            className={`block cursor-pointer text-start px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
-                              selectedNameIndex === index
-                                ? "bg-gray-200 dark:bg-gray-500"
-                                : ""
+                            className={`block cursor-pointer text-start px-4 py-2 hover:bg-gray-100  ${
+                              selectedNameIndex === index ? "bg-gray-200 " : ""
                             }`}
                           >
                             {dates}
@@ -1141,7 +1146,7 @@ const SuperAdminReports = () => {
                     <li>
                       <Link
                         onClick={() => handleNameFilter("resetAllNames", null)}
-                        className="block px-4 py-2 hover:bg-gray-100 text-start dark:hover:bg-gray-600 dark:hover:text-white"
+                        className="block px-4 py-2 hover:bg-gray-100 text-start "
                       >
                         Reset Filter
                       </Link>
@@ -1167,10 +1172,10 @@ const SuperAdminReports = () => {
                   id="dropdownDelay"
                   className={`absolute left-0 mt-2 z-10 ${
                     dropdownVisible ? "" : "hidden"
-                  } bg-white divide-y divide-gray-100 rounded-lg shadow w-52 dark:bg-gray-700`}
+                  } bg-white divide-y divide-gray-100 rounded-lg shadow w-52 `}
                 >
                   <div
-                    className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                    className="py-2 text-sm text-gray-700 "
                     aria-labelledby="dropdownDelayButton"
                   >
                     {storeFilterDates.map((dates) => (
@@ -1181,10 +1186,8 @@ const SuperAdminReports = () => {
                       >
                         <li>
                           <p
-                            className={`block px-4 py-2 text-start hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
-                              selectedDate === dates._id
-                                ? "bg-gray-200 dark:bg-gray-500"
-                                : ""
+                            className={`block px-4 py-2 text-start hover:bg-gray-100  ${
+                              selectedDate === dates._id ? "bg-gray-200 " : ""
                             }`}
                           >
                             {formatDate3(dates.EventStartDate)}
@@ -1197,7 +1200,7 @@ const SuperAdminReports = () => {
                     <li>
                       <Link
                         onClick={() => handleDateFilter(null, "reset")}
-                        className="block px-4 py-2 text-start hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        className="block px-4 py-2 text-start hover:bg-gray-100 "
                       >
                         Reset Filter
                       </Link>

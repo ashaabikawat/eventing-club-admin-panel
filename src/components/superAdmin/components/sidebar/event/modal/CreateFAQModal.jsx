@@ -136,7 +136,7 @@ const CreateFAQModal = ({ setShowCreateFaqModal, onNewFAQ }) => {
                   <div className="md:col-span-2">
                     <label
                       htmlFor="name"
-                      className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                      className="block mb-2 text-start text-sm font-medium text-gray-900 "
                     >
                       Question*
                     </label>
@@ -147,7 +147,7 @@ const CreateFAQModal = ({ setShowCreateFaqModal, onNewFAQ }) => {
                       value={values.faqQuestion}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     />
                     {errors.faqQuestion && touched.faqQuestion ? (
                       <p className="font-Marcellus text-start text-red-900">
@@ -160,7 +160,7 @@ const CreateFAQModal = ({ setShowCreateFaqModal, onNewFAQ }) => {
                   <div className="md:col-span-2 mb-4">
                     <label
                       htmlFor="faqAnswer"
-                      className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                      className="block mb-2 text-start text-sm font-medium text-gray-900 "
                     >
                       Answer
                     </label>
@@ -171,7 +171,7 @@ const CreateFAQModal = ({ setShowCreateFaqModal, onNewFAQ }) => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       rows={4}
-                      className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
                     />
                     {errors.faqAnswer && touched.faqAnswer ? (
                       <p className="font-Marcellus text-start text-red-900">

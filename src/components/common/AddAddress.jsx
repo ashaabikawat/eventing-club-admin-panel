@@ -138,7 +138,7 @@ const AddAddress = ({
       <div className="w-[50%]">
         <label
           htmlFor="name"
-          className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-start text-sm font-medium text-gray-900 "
         >
           State
         </label>
@@ -154,7 +154,7 @@ const AddAddress = ({
             );
             setStateName(selectedCountry ? selectedCountry.name : "");
           }}
-          className="bg-gray-50 border border-gray-300 w-[97%] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="bg-gray-50 border border-gray-300 w-[97%] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
         >
           <option value="" disabled>
             Select State
@@ -170,7 +170,8 @@ const AddAddress = ({
       <div className="w-[48%] ">
         <label
           htmlFor="name"
-          className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-start text-sm font-medium text-gray-900 
+          "
         >
           City
         </label>
@@ -181,7 +182,7 @@ const AddAddress = ({
             handlerchangecity(event);
           }}
           // value={values.city}
-          className="bg-gray-50 flex justify-end items-end border w-[100%] border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500   p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="bg-gray-50 flex justify-end items-end border w-[100%] border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500   p-2.5 "
         >
           <option value="" disabled>
             Select City

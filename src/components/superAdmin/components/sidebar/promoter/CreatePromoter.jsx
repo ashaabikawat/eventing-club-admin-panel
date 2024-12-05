@@ -150,7 +150,7 @@ const CreatePromoter = ({ setPromoterCrationModal }) => {
               <div className="md:col-span-2">
                 <label
                   htmlFor="promoterFullName"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Full Name
                 </label>
@@ -162,7 +162,7 @@ const CreatePromoter = ({ setPromoterCrationModal }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter Promoter full name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {errors.promoterFullName && touched.promoterFullName ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -174,7 +174,7 @@ const CreatePromoter = ({ setPromoterCrationModal }) => {
               <div className="md:col-span-2">
                 <label
                   htmlFor="promoterusername"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   UserName
                 </label>
@@ -186,7 +186,7 @@ const CreatePromoter = ({ setPromoterCrationModal }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter promoter full name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {errors.promoterusername && touched.promoterusername ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -222,7 +222,7 @@ const CreatePromoter = ({ setPromoterCrationModal }) => {
               <div className="md:col-span-1">
                 <label
                   htmlFor="promoterEmail"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Email Id
                 </label>
@@ -234,7 +234,7 @@ const CreatePromoter = ({ setPromoterCrationModal }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter promoter emailId "
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {errors.promoterEmail && touched.promoterEmail ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -246,7 +246,7 @@ const CreatePromoter = ({ setPromoterCrationModal }) => {
               <div className="">
                 <label
                   htmlFor="promoterPhoneNo"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Phone No.
                 </label>
@@ -258,7 +258,7 @@ const CreatePromoter = ({ setPromoterCrationModal }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter promoter phone number "
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {errors.promoterPhoneNo && touched.promoterPhoneNo ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -282,7 +282,7 @@ const CreatePromoter = ({ setPromoterCrationModal }) => {
               <div className="md:col-span-2 relative">
                 <label
                   htmlFor="name"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Password
                 </label>
@@ -322,11 +322,11 @@ const CreatePromoter = ({ setPromoterCrationModal }) => {
                 value=""
                 disabled={!values?.promoterEmail}
                 onChange={handleCheckboxChange}
-                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "
               />
               <label
                 htmlFor="checked-checkbox"
-                className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                className="ms-2 text-sm font-medium text-gray-900 "
               >
                 Tick here to send a new account information message to this
                 individual

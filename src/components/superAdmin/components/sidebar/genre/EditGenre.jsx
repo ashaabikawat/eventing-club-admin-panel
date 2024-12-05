@@ -396,7 +396,7 @@ const EditGenre = () => {
               <div className="md:col-span-2">
                 <label
                   htmlFor="name"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Genre Name*
                 </label>
@@ -407,7 +407,7 @@ const EditGenre = () => {
                   value={values.genreName}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {errors.genreName && touched.genreName ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -420,7 +420,7 @@ const EditGenre = () => {
               <div className="md:col-span-2 mb-4">
                 <label
                   htmlFor="artistDescription"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Genre Description
                 </label>
@@ -430,7 +430,7 @@ const EditGenre = () => {
                   value={values.genreDescription ? values.genreDescription : ""}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
                 />
                 {/* {errors.genreDescription && touched.genreDescription ? (
                   <p className="font-Marcellus text-start text-red-900">

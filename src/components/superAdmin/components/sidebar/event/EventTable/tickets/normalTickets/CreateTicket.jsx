@@ -554,7 +554,7 @@ const CreateTicket = ({
           <div className="md:w-[80%] mt-4">
             <label
               htmlFor="name"
-              className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-start text-base font-medium text-gray-900 "
             >
               Ticket Name*
             </label>
@@ -565,7 +565,7 @@ const CreateTicket = ({
               value={values.ticketName}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
             {errors.ticketName && touched.ticketName ? (
               <p className="font-Marcellus text-start text-red-900">
@@ -578,7 +578,7 @@ const CreateTicket = ({
           <div className="md:w-[80%] mt-4">
             <label
               htmlFor="eventTourDescription"
-              className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-start text-base font-medium text-gray-900 "
             >
               Ticket Description
             </label>
@@ -589,7 +589,7 @@ const CreateTicket = ({
               onChange={handleChange}
               onBlur={handleBlur}
               rows={5}
-              className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
             />
             {/* {errors.ticketDescription && touched.ticketDescription ? (
               <p className="font-Marcellus text-start text-red-900">
@@ -601,7 +601,7 @@ const CreateTicket = ({
           <div className="md:w-[80%] mt-4">
             <label
               htmlFor="name"
-              className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-start text-base font-medium text-gray-900 "
             >
               Price*
             </label>
@@ -612,7 +612,7 @@ const CreateTicket = ({
               value={values.ticketPrice}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
             {errors.ticketPrice && touched.ticketPrice ? (
               <p className="font-Marcellus text-start text-red-900">
@@ -625,7 +625,7 @@ const CreateTicket = ({
             <div className="w-[100%] mt-4">
               <label
                 htmlFor="name"
-                className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-start text-base font-medium text-gray-900 "
               >
                 Total Quantity*
               </label>
@@ -636,7 +636,7 @@ const CreateTicket = ({
                 value={values.ticketQuantity}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               />
               {errors.ticketQuantity && touched.ticketQuantity ? (
                 <p className="font-Marcellus text-start text-red-900">
@@ -647,7 +647,7 @@ const CreateTicket = ({
             <div className="w-[100%] mt-4">
               <label
                 htmlFor="name"
-                className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-start text-base font-medium text-gray-900 "
               >
                 Booking Max Limit*
               </label>
@@ -658,7 +658,7 @@ const CreateTicket = ({
                 value={values.ticketMaxLimit}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               />
               {errors.ticketMaxLimit && touched.ticketMaxLimit ? (
                 <p className="font-Marcellus text-start text-red-900">

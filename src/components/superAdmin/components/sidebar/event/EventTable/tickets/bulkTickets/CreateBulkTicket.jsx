@@ -176,7 +176,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
           <div className="md:w-[80%] mt-8">
             <label
               htmlFor="ticketName"
-              className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-start text-base font-medium text-gray-900 "
             >
               Ticket Name*
             </label>
@@ -187,7 +187,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
               value={values.ticketName}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
             {errors.ticketName && touched.ticketName ? (
               <p className="font-Marcellus text-start text-red-900">
@@ -199,7 +199,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
           <div className="md:w-[80%] mt-8">
             <label
               htmlFor="customerName"
-              className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-start text-base font-medium text-gray-900 "
             >
               Customer Name*
             </label>
@@ -210,7 +210,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
               value={values.customerName}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             />
             {errors.customerName && touched.customerName ? (
               <p className="font-Marcellus text-start text-red-900">
@@ -223,7 +223,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
             <div className="w-[100%] mt-4">
               <label
                 htmlFor="ticketPhoneNumber"
-                className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-start text-base font-medium text-gray-900 "
               >
                 Phone Number*
               </label>
@@ -234,7 +234,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
                 value={values.ticketPhoneNumber}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               />
               {errors.ticketPhoneNumber && touched.ticketPhoneNumber ? (
                 <p className="font-Marcellus text-start text-red-900">
@@ -245,7 +245,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
             <div className="w-[100%] mt-4">
               <label
                 htmlFor="ticketEmailId"
-                className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-start text-base font-medium text-gray-900 "
               >
                 Email*
               </label>
@@ -256,7 +256,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
                 value={values.ticketEmailId}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               />
               {errors.ticketEmailId && touched.ticketEmailId ? (
                 <p className="font-Marcellus text-start text-red-900">
@@ -270,7 +270,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
             <div className="w-[100%] mt-4 z-10 relative">
               <label
                 htmlFor="ticketDate"
-                className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-start text-base font-medium text-gray-900 "
               >
                 Select Date*
               </label>
@@ -283,7 +283,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
                 onClick={handleInputClick}
                 onBlur={handleBlur}
                 readOnly // Prevent direct input
-                className="bg-gray-50 border z-10 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border z-10 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               />
               {showCalendar && (
                 <DatePicker
@@ -297,7 +297,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
                   highlightDates={
                     selectedDate ? [new Date(selectedDate.EventStartDate)] : []
                   }
-                  className="bg-gray-50 border absolute  z-10 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500   mt-2"
+                  className="bg-gray-50 border absolute  z-10 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  mt-2"
                 />
               )}
               {errors.ticketDate && touched.ticketDate ? (
@@ -310,7 +310,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
             <div className="w-[100%] mt-4 z-10">
               <label
                 htmlFor="ticketQuantity"
-                className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-start text-base font-medium text-gray-900 "
               >
                 Total Quantity*
               </label>
@@ -321,7 +321,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
                 value={values.ticketQuantity}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               />
               {errors.ticketQuantity && touched.ticketQuantity ? (
                 <p className="font-Marcellus text-start text-red-900">
@@ -353,7 +353,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
             <div className="w-[100%] mt-4">
               <label
                 htmlFor="ticketPrice"
-                className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-start text-base font-medium text-gray-900"
               >
                 Ticket Price*
               </label>
@@ -364,7 +364,7 @@ const CreateBulkTicket = ({ eventDates, setTicketCreation }) => {
                 value={values.ticketPrice}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               />
               {errors.ticketPrice && touched.ticketPrice ? (
                 <p className="font-Marcellus text-start text-red-900">

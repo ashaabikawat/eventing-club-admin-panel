@@ -345,11 +345,11 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
                   value="allEvents"
                   checked={selectedOption === "allEvents"}
                   onChange={handleOptionChange}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500   focus:ring-2 "
                 />
                 <label
                   htmlFor="allEvents"
-                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-sm font-medium text-gray-900 "
                 >
                   All Events
                 </label>
@@ -364,11 +364,11 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
                   onClick={() => setOpenSpecificEvents(true)}
                   checked={selectedOption === "specificEvents"}
                   onChange={handleOptionChange}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 d  focus:ring-2 "
                 />
                 <label
                   htmlFor="specificEvents"
-                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-sm font-medium text-gray-900 "
                 >
                   Specific Events
                 </label>
@@ -378,7 +378,7 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
               <div className="md:col-span-2 mt-6 md:mt-0">
                 <label
                   htmlFor="codeName"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Code Name
                 </label>
@@ -390,7 +390,7 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter promocode"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
                 />
                 {errors.codeName && touched.codeName ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -403,7 +403,7 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
               <div className="md:col-span-2 mb-4 mt-6 md:mt-0">
                 <label
                   htmlFor="termsConditions"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Terms & Conditions
                 </label>
@@ -413,7 +413,7 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
                   value={values.termsConditions}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
                 />
                 {errors.termsConditions && touched.termsConditions ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -426,7 +426,7 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
               <div className="md:col-span-1 mt-6 md:mt-0">
                 <label
                   htmlFor="feeunit"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Unit*
                 </label>
@@ -436,7 +436,7 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
                   value={values.feeunit}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 >
                   {Object.keys(ConvinienceFeeUnit).map((key) => (
                     <option key={key} value={ConvinienceFeeUnit[key]}>
@@ -455,7 +455,7 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
               <div className="mt-6 md:mt-0">
                 <label
                   htmlFor="discountPrice"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900"
                 >
                   Discount Price*
                 </label>
@@ -467,7 +467,7 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter Value "
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {/* {errors.organizerPhoneNo && touched.organizerPhoneNo ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -480,7 +480,7 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
               <div className="mt-6 md:mt-0">
                 <label
                   htmlFor="minimumCheckout"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Minimum checkout*
                 </label>
@@ -492,7 +492,7 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter Value "
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {/* {errors.organizerPhoneNo && touched.organizerPhoneNo ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -505,7 +505,7 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
               <div className="mt-6 md:mt-0">
                 <label
                   htmlFor="expiryDate"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Expiry Date*
                 </label>
@@ -517,7 +517,7 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
                   value={values.expiryDate}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {/* {errors.organizerPhoneNo && touched.organizerPhoneNo ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -537,11 +537,11 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
                     value="redemption"
                     checked={values.redemptionType}
                     onChange={handleChangeRedemption}
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500   focus:ring-2 "
                   />
                   <label
                     htmlFor="redemption"
-                    className="ml-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    className="ml-2 text-base font-medium text-gray-900"
                   >
                     Once per user
                   </label>
@@ -561,11 +561,11 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
                   value="all"
                   checked={selectedVisibility === "all"}
                   onChange={handleVisibility}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 "
                 />
                 <label
                   htmlFor="all"
-                  className="ml-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-base font-medium text-gray-900"
                 >
                   All customers
                 </label>
@@ -580,11 +580,11 @@ const CreatePromocodes = ({ setPromoCodeCreationModal }) => {
                   onClick={() => setSpecificCustomers(true)}
                   checked={selectedVisibility === "specific"}
                   onChange={handleVisibility}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 "
                 />
                 <label
                   htmlFor="specific"
-                  className="ml-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-base font-medium text-gray-900 "
                 >
                   Specific Customers
                 </label>

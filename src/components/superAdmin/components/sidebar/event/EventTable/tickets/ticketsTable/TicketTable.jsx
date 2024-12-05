@@ -423,10 +423,10 @@ const TicketTable = () => {
                         id="dropdownDelay"
                         className={`absolute right-0 mt-2 z-10 ${
                           nameDropDownVisible ? "" : "hidden"
-                        } bg-white divide-y divide-gray-100 rounded-lg shadow w-56 dark:bg-gray-700`}
+                        } bg-white divide-y divide-gray-100 rounded-lg shadow w-56`}
                       >
                         <div
-                          className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                          className="py-2 text-sm text-gray-700 "
                           aria-labelledby="dropdownDelayButton"
                         >
                           {ticketNameFilterData.map((dates, index) => (
@@ -437,9 +437,9 @@ const TicketTable = () => {
                             >
                               <li>
                                 <p
-                                  className={`block cursor-pointer text-start px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
+                                  className={`block cursor-pointer text-start px-4 py-2 hover:bg-gray-100  ${
                                     selectedNameIndex === index
-                                      ? "bg-gray-200 dark:bg-gray-500"
+                                      ? "bg-gray-200 "
                                       : ""
                                   }`}
                                 >
@@ -455,7 +455,7 @@ const TicketTable = () => {
                               onClick={() =>
                                 handleNameFilter("resetAllNames", null)
                               }
-                              className="block px-4 py-2 hover:bg-gray-100 text-start dark:hover:bg-gray-600 dark:hover:text-white"
+                              className="block px-4 py-2 hover:bg-gray-100 text-start "
                             >
                               Reset Filter
                             </Link>
@@ -482,10 +482,10 @@ const TicketTable = () => {
                         id="dropdownDelay"
                         className={`absolute right-0 mt-2 z-10 ${
                           dropdownVisible ? "" : "hidden"
-                        } bg-white divide-y divide-gray-100 rounded-lg shadow w-52 dark:bg-gray-700`}
+                        } bg-white divide-y divide-gray-100 rounded-lg shadow w-52 `}
                       >
                         <div
-                          className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                          className="py-2 text-sm text-gray-700 "
                           aria-labelledby="dropdownDelayButton"
                         >
                           {storeFilterDates.map((dates) => (
@@ -500,7 +500,7 @@ const TicketTable = () => {
                             >
                               <li>
                                 <p
-                                  className={`block px-4 py-2 text-start hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
+                                  className={`block px-4 py-2 text-start hover:bg-gray-100 ${
                                     selectedDate === dates._id
                                       ? "bg-gray-200 dark:bg-gray-500"
                                       : ""
@@ -516,7 +516,7 @@ const TicketTable = () => {
                           <li>
                             <Link
                               onClick={() => handleDateFilter(null, "reset")}
-                              className="block px-4 py-2 text-start hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              className="block px-4 py-2 text-start hover:bg-gray-100 "
                             >
                               Reset Filter
                             </Link>

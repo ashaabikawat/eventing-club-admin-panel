@@ -217,11 +217,11 @@ const EditOrganizer = () => {
                   // checked={selectedOption === "ownClub"}
                   checked={organizerData?.OwnerType === "1"}
                   // onChange={handleOptionChange}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "
                 />
                 <label
                   htmlFor="ownClub"
-                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-sm font-medium text-gray-900 "
                 >
                   Own club
                 </label>
@@ -237,11 +237,11 @@ const EditOrganizer = () => {
                   // checked={selectedOption === "eventCompany"}
                   checked={organizerData?.OwnerType === "2"}
                   // onChange={handleOptionChange}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "
                 />
                 <label
                   htmlFor="eventCompany"
-                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-sm font-medium text-gray-900 "
                 >
                   Event company name
                 </label>
@@ -251,7 +251,7 @@ const EditOrganizer = () => {
                 <div className="mt-2 md:col-span-2">
                   <label
                     htmlFor="clubName"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-gray-900 "
                   >
                     Own Club Name
                   </label>
@@ -262,7 +262,7 @@ const EditOrganizer = () => {
                     disabled
                     value={organizerData?.CompanyName}
                     // onChange={(e) => setClubName(e.target.value)}
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     placeholder="Enter your club name"
                   />
                 </div>
@@ -272,7 +272,7 @@ const EditOrganizer = () => {
                 <div className="mt-2 md:col-span-2">
                   <label
                     htmlFor="companyName"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-gray-900 "
                   >
                     Event Company Name
                   </label>
@@ -283,7 +283,7 @@ const EditOrganizer = () => {
                     disabled
                     value={organizerData?.CompanyName}
                     // onChange={(e) => setCompanyName(e.target.value)}
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     placeholder="Enter event company name"
                   />
                 </div>
@@ -292,7 +292,7 @@ const EditOrganizer = () => {
               <div className="md:col-span-2">
                 <label
                   htmlFor="organizername"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Full Name
                 </label>
@@ -302,7 +302,7 @@ const EditOrganizer = () => {
                   value={values?.organizername}
                   onChange={handleChange}
                   placeholder="Enter organizer full name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 0"
                 />
               </div>
 
@@ -324,7 +324,7 @@ const EditOrganizer = () => {
               <div className="md:col-span-2">
                 <label
                   htmlFor="organizerFullName"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   UserName
                 </label>
@@ -335,14 +335,14 @@ const EditOrganizer = () => {
                   name="organizerusername"
                   value={organizerData.Username}
                   placeholder="Enter organizer full name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
               </div>
 
               <div className="md:col-span-1">
                 <label
                   htmlFor="organizerEmail"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Email Id
                 </label>
@@ -352,14 +352,14 @@ const EditOrganizer = () => {
                   value={values?.email}
                   onChange={handleChange}
                   placeholder="Enter organizer emailId "
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
               </div>
 
               <div className="">
                 <label
                   htmlFor="organizerPhoneNo"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900"
                 >
                   Phone No.
                 </label>
@@ -369,7 +369,7 @@ const EditOrganizer = () => {
                   onChange={handleChange}
                   value={values.organizerPhoneNo}
                   placeholder="Enter organizer phone number "
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
               </div>
               {/* 

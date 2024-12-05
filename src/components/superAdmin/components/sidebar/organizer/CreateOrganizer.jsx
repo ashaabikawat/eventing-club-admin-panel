@@ -176,11 +176,11 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
                   value="ownClub"
                   checked={selectedOption === "ownClub"}
                   onChange={handleOptionChange}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "
                 />
                 <label
                   htmlFor="ownClub"
-                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-sm font-medium text-gray-900 "
                 >
                   Own club
                 </label>
@@ -194,11 +194,11 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
                   value="eventCompany"
                   checked={selectedOption === "eventCompany"}
                   onChange={handleOptionChange}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "
                 />
                 <label
                   htmlFor="eventCompany"
-                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-sm font-medium text-gray-900 "
                 >
                   Event company name
                 </label>
@@ -208,7 +208,7 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
                 <div className="mt-2 md:col-span-2">
                   <label
                     htmlFor="clubName"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-gray-900"
                   >
                     Own Club Name
                   </label>
@@ -218,7 +218,7 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
                     name="clubName"
                     value={clubName}
                     onChange={(e) => setClubName(e.target.value)}
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     placeholder="Enter your club name"
                   />
                 </div>
@@ -228,7 +228,7 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
                 <div className="mt-2 md:col-span-2">
                   <label
                     htmlFor="companyName"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-gray-900 "
                   >
                     Event Company Name
                   </label>
@@ -238,7 +238,7 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
                     name="companyName"
                     value={companyName}
                     onChange={(e) => setCompanyName(e.target.value)}
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     placeholder="Enter event company name"
                   />
                 </div>
@@ -248,7 +248,7 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
               <div className="md:col-span-2">
                 <label
                   htmlFor="organizerFullName"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Full Name
                 </label>
@@ -260,7 +260,7 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter organizer full name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {errors.organizerFullName && touched.organizerFullName ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -272,7 +272,7 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
               <div className="md:col-span-2">
                 <label
                   htmlFor="organizerFullName"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   UserName
                 </label>
@@ -284,7 +284,7 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter organizer full name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {errors.organizerusername && touched.organizerusername ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -297,7 +297,7 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
               <div className="md:col-span-1">
                 <label
                   htmlFor="organizerEmail"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Email Id
                 </label>
@@ -309,7 +309,7 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter organizer emailId "
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {errors.organizerEmail && touched.organizerEmail ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -322,7 +322,7 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
               <div className="">
                 <label
                   htmlFor="organizerPhoneNo"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Phone No.
                 </label>
@@ -334,7 +334,7 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   placeholder="Enter organizer phone number "
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 />
                 {errors.organizerPhoneNo && touched.organizerPhoneNo ? (
                   <p className="font-Marcellus text-start text-red-900">
@@ -360,7 +360,7 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
               <div className="md:col-span-2 relative">
                 <label
                   htmlFor="name"
-                  className="block mb-2 text-start text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
                 >
                   Password
                 </label>
@@ -401,11 +401,11 @@ const CreateOrganizer = ({ setOrganizerCrationModal }) => {
                 value=""
                 disabled={!values?.organizerEmail}
                 onChange={handleCheckboxChange}
-                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "
               />
               <label
                 htmlFor="checked-checkbox"
-                className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                className="ms-2 text-sm font-medium text-gray-90"
               >
                 Tick here to send a new account information message to this
                 individual

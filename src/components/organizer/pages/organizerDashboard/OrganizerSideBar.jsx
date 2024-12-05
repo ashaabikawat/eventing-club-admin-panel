@@ -82,7 +82,7 @@ const OrganizerSideBar = () => {
             <NavLink
               //  onClick={handleMenuItemClick}
               to="/superAdmin/dashboard"
-              className="flex items-center flex-shrink-0 text-xl text-gray-800 dark:text-gray-200 my-2"
+              className="flex items-center flex-shrink-0 text-xl text-gray-800  my-2"
             >
               <img src={logo} className="h-full mr-5 sm:h-14" alt="Logo" />
             </NavLink>
@@ -108,7 +108,7 @@ const OrganizerSideBar = () => {
               <li>
                 <button
                   type="button"
-                  className="flex items-center text-center  mt-6 w-full p-2 px-5 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  className="flex items-center text-center  mt-6 w-full p-2 px-5 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 "
                   aria-controls="dropdown-example"
                   onClick={toggleSidebar}
                 >
@@ -124,7 +124,7 @@ const OrganizerSideBar = () => {
               <li>
                 <button
                   type="button"
-                  className=" px-5 flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  className=" px-5 flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 "
                   aria-controls="dropdown-example"
                   onClick={toggleSidebar}
                 >
@@ -140,7 +140,7 @@ const OrganizerSideBar = () => {
               <li>
                 <button
                   type="button"
-                  className="px-5 flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  className="px-5 flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 "
                   aria-controls="dropdown-example"
                   onClick={toggleSidebar}
                 >
@@ -157,7 +157,7 @@ const OrganizerSideBar = () => {
               <li>
                 <button
                   type="button"
-                  className="px-5 flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  className="px-5 flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 "
                   aria-controls="dropdown-example"
                   onClick={toggleSidebar}
                 >
@@ -174,7 +174,7 @@ const OrganizerSideBar = () => {
             <button
               type="button"
               onClick={() => setShowModal(true)}
-              className="text-white  bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
+              className="text-white  bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 mb-2"
             >
               <span className="mr-3">
                 <TbLogout2 size={25} />
