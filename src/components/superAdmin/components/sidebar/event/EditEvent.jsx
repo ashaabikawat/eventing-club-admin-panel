@@ -554,8 +554,8 @@ const EditEvent = () => {
   const handleSelectChangeCategory = (selected) => {
     setSelectedOptionsForCategory(selected);
     // const categoryID = selected.map((id) => ({ category_id: id.value }));
-    console.log({ selected });
-    setCategoryID(selected);
+    console.log([selected]);
+    setCategoryID([selected]);
   };
 
   // Artist functions
@@ -753,6 +753,8 @@ const EditEvent = () => {
     setSelectedEventTourID(selected.value);
   };
 
+  console.log("selectedOptionsForCategory", selectedOptionsForCategory);
+
   const initialValues = loading
     ? {
         eventVisibility: "",
@@ -897,12 +899,14 @@ const EditEvent = () => {
       //   category_id: item.value
       // }));
 
-      console.log(categoryID.value);
+      console.log("categoryID", categoryID);
+
       const category = [
         {
-          category_id: categoryID.value,
+          category_id: categoryID[0]?.value, // Use manually selected value
         },
       ];
+      console.log("category", category);
 
       formData.append("EventCategories", JSON.stringify(category));
       const artist = artistID.map((item) => ({ artist_id: item.value }));

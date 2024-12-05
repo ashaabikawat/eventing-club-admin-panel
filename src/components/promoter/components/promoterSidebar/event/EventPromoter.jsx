@@ -341,12 +341,12 @@ const EventPromoter = () => {
                       {event.EventName}
                     </h1>
                     {/* Render event description as HTML and hide overflow */}
-                    <div
+                    {/* <div
                       className="text-gray-600 overflow-hidden md:h-[50px] mt-2 mb-4"
                       dangerouslySetInnerHTML={{
                         __html: event.EventDescription,
                       }}
-                    />
+                    /> */}
                   </div>
                   <div className="mt-2">
                     <p className="text-gray-600 flex">
