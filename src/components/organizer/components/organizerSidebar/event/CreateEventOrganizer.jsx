@@ -1920,7 +1920,7 @@ const CreateEventOrganizer = ({ eventSelectionFlag, setEventCrationModal }) => {
               </div>
 
               {/* Manage Event FAQ */}
-              <div className="mt-4">
+              <div className="mt-10">
                 <div className="relative">
                   <h1 className="text-base font-semibold relative">
                     Manage Event FAQs

@@ -109,7 +109,7 @@ const UploadGalleryImg = ({ setGalleryImages }) => {
           </div>
         </div>
       </div>
-      <div className="w-[100%] h-[400px] bg-grayshade mt-[1%]">
+      <div className="w-[100%] h-[450px] bg-grayshade mt-[1%]">
         <div className="w-full">
           <div className="flex items-center justify-start w-full ">
             <label className="flex flex-col w-[96%] mt-[2%] mx-auto h-[200px]  hover:border-gray-300 relative bg-Gray85">
