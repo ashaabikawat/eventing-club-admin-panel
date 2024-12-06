@@ -40,14 +40,14 @@ const BannerTable = ({ banners, loading }) => {
                   <td className="px-6 py-4">
                     <img
                       className="w-44 h-20 object-cover "
-                      src={`${BASE_URl}/${banner.DesktopbannerImage}`}
+                      src={`${BASE_URl}/${banner?.DesktopbannerImage}`}
                       alt="Jese image"
                     />
                   </td>
                   <td>
                     <img
                       className="w-44 h-20 object-cover"
-                      src={`${BASE_URl}/${banner.MobilebannerImage}`}
+                      src={`${BASE_URl}/${banner?.MobilebannerImage}`}
                       alt="Jese image"
                     />
                   </td>

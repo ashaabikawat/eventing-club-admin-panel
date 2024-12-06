@@ -107,7 +107,7 @@ const ArtistTable = ({
                 >
                   <img
                     className="w-10 h-10 rounded-full"
-                    src={`${BASE_URl}/${artist?.Images[0].image_path}`}
+                    src={`${BASE_URl}/${artist?.Images[0]?.image_path}`}
                     alt="Jese image"
                   />
                   <div className="ps-3">
