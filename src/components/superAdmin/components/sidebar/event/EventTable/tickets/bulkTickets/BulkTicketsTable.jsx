@@ -214,12 +214,15 @@ const BulkTicketsTable = () => {
 
       let response = await axios.post(
         `${eventbulktickets.DOWNLOAD_BULK_EVENT_TICKETS}`,
-        payload
+        payload,
+        { responseType: "blob" }
       );
 
       console.log(response.data);
 
-      const blob = new Blob([response.data], { type: "application/xlsx" });
+      const blob = new Blob([response.data], {
+        type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      });
 
       // Create a URL for the Blob object
       const url = URL.createObjectURL(blob);
