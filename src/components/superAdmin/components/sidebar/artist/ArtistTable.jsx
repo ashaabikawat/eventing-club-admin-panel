@@ -111,13 +111,15 @@ const ArtistTable = ({
                     alt="Jese image"
                   />
                   <div className="ps-3">
-                    <div className="text-base font-semibold">{artist.Name}</div>
+                    <div className="text-base font-semibold">
+                      {artist?.Name}
+                    </div>
                     <div className="font-normal text-gray-500">
-                      {artist.Email}
+                      {artist?.Email}
                     </div>
                   </div>
                 </th>
-                <td className="px-6 py-4">{artist.Email}</td>
+                <td className="px-6 py-4">{artist?.Email}</td>
                 <td className="px-6 py-4">{artist?.PhoneNo}</td>
                 <td className="px-6 py-4">
                   <button

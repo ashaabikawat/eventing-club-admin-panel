@@ -224,7 +224,7 @@ const EditCarouselImage = ({ eventCarouselImages, setEventCarouselImages }) => {
                   <div key={index} className="">
                     <img
                       src={`${import.meta.env.VITE_REACT_APP_BASE_URL}/${
-                        image.image_path
+                        image?.image_path
                       }`}
                       alt={`Product Image ${index}`}
                       className="mt-2 w-[150px] h-[150px] px-3 relative object-cover"

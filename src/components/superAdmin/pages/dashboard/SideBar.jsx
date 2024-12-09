@@ -99,7 +99,7 @@ const SideBar = () => {
             <div className="flex items-center justify-center my-3 ">
               <NavLink
                 //  onClick={handleMenuItemClick}
-                to="/superAdmin/dashboard"
+                to="/superAdmin/dashboard/event"
                 className="flex items-center flex-shrink-0 text-xl text-gray-800  my-2"
               >
                 <img src={logo} className="h-full mr-5 sm:h-14" alt="Logo" />
