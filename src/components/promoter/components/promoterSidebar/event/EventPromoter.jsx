@@ -324,11 +324,14 @@ const EventPromoter = () => {
               className="bg-[#F5F5F5] p-4  h-auto flex flex-col justify-between"
             >
               {/* First Parent Div */}
-              <div className="flex md:flex-row  flex-col md:h-[80%] h-[40%]">
+              <div
+                div
+                className="flex md:flex-row  flex-col md:h-[80%] h-[40%]"
+              >
                 <div className="md:w-[50%] md:h-full w-full ">
                   <img
                     src={`${import.meta.env.VITE_REACT_APP_BASE_URL}/${
-                      event.EventCarouselImages[0].image_path
+                      event.EventCarouselImages[0]?.image_path
                     }`}
                     alt={`Product Image ${index}`}
                     className="w-full h-full object-cover "
