@@ -6,6 +6,7 @@ import { BiSolidCategoryAlt } from "react-icons/bi";
 import { TbBrandBooking, TbLogout2 } from "react-icons/tb";
 import { VscOrganization } from "react-icons/vsc";
 import { MdSell } from "react-icons/md";
+import { MdLeaderboard } from "react-icons/md";
 import { GrUserWorker } from "react-icons/gr";
 import { MdEventNote } from "react-icons/md";
 import { TbReportAnalytics } from "react-icons/tb";
@@ -371,6 +372,23 @@ const SideBar = () => {
                 </li>
               </NavLink>
 
+              <NavLink to={"/superadmin/dashboard/leads"}>
+                <li>
+                  <button
+                    type="button"
+                    className="px-5 flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 "
+                    aria-controls="dropdown-example"
+                    onClick={toggleSidebar}
+                  >
+                    <MdLeaderboard size={20} />
+
+                    <span className="flex-1 ml-3 text-lg text-left whitespace-nowrap">
+                      Leads
+                    </span>
+                  </button>
+                </li>
+              </NavLink>
+
               <NavLink to={"/superadmin/dashboard/settings"}>
                 <li>
                   <button
@@ -387,6 +405,7 @@ const SideBar = () => {
                   </button>
                 </li>
               </NavLink>
+
               <div className=" w-[86%] flex justify-center">
                 <button
                   type="button"

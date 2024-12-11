@@ -70,6 +70,7 @@ import ScannerUser from "./components/superAdmin/components/sidebar/scanner user
 import CustomerBookings from "./components/superAdmin/components/sidebar/customer/CustomerBookings";
 import Sales from "./components/superAdmin/components/sidebar/organizer/Sales";
 import ScannerEdit from "./components/superAdmin/components/sidebar/scanner user/ScannerEdit";
+import LeadsTable from "./components/superAdmin/components/sidebar/leads/LeadsTable";
 
 function App() {
   return (
@@ -233,6 +234,10 @@ function App() {
             path="/superAdmin/dashboard/settings"
             element={<AdminSettings />}
           />
+
+          {/* leads */}
+
+          <Route path="/superAdmin/dashboard/leads" element={<LeadsTable />} />
         </Route>
       </Routes>
 

@@ -428,3 +428,7 @@ export const smtpDetails = {
   REGISTER: BASE_URl + "/smtp/register",
   UPDATE_BY_ID: BASE_URl + "/smtp/updatebyId",
 };
+
+export const leadsData = {
+  GET_ALL_PAGINATED: BASE_URl + "/webiste/leads/getAllPaginated",
+};
