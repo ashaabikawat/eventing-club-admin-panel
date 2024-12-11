@@ -253,7 +253,7 @@ export const eventTicketsObjectSchema = yup.object().shape({
 });
 
 export const eventBulkTicketsObjectSchema = yup.object().shape({
-  ticketName: yup.string().min(5).required("Ticket Name is required"),
+  ticketName: yup.string().min(2).required("Ticket Name is required"),
   customerName: yup.string().min(3).required("Customer Name is required"),
   ticketPrice: yup
     .number()
