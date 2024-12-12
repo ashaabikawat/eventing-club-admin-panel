@@ -9,6 +9,7 @@ import { LiaFileDownloadSolid } from "react-icons/lia";
 import { CiFilter } from "react-icons/ci";
 import { formatDate2, formatDate3 } from "../../../../common/formatDate2";
 import { BulkCancelStatus } from "../../../../common/helper/Enum";
+import formatAmount from "../../../../common/formatAmount";
 
 const Bulk = ({
   selectedBookingType,
@@ -43,6 +44,10 @@ const Bulk = ({
   const [bulkCancelID, setBulkCancelID] = useState(null);
   const [bulkCancelModal, setBulkCancelModal] = useState(false);
 
+  const [totalQuantity, setTotalQuantity] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalCheckin, setTotalCheckin] = useState(0);
+
   // Filtered By Name and Date
   const [filters, setFilters] = useState({ eventDateTime: "", TicketName: "" });
 
@@ -66,6 +71,9 @@ const Bulk = ({
       setOriginalData(response.data.data.EventBulkTicketsData);
       setBulkNameFilter(response.data.data.TicketNamesArray);
       setStoreFilterDates(response.data.data.EventDatesTime);
+      setTotalQuantity(response.data.data.totalQuantity);
+      setTotalCheckin(response.data.data.totalCheckInCount);
+      setTotalPrice(response.data.data.totalPrice);
       setLoading(false);
     } catch (error) {
       if (error.response) {
@@ -507,6 +515,22 @@ const Bulk = ({
                 </li>
               </div>
             </ul>
+          </div>
+        </div>
+        <div className="flex md:flex-row flex-col my-6 gap-4 w-[100%]">
+          <div className="h-32  w-full bg-gray-100 flex flex-col justify-center px-4 ">
+            <p className="capitalize md:text-xl ">total quantity</p>
+            <p className="capitalize text-xl font-semibold">{totalQuantity}</p>
+          </div>
+          <div className="h-32  w-full bg-gray-100 flex flex-col justify-center px-4 ">
+            <p className="capitalize md:text-xl ">total checkin</p>
+            <p className="capitalize text-xl font-semibold">{totalCheckin}</p>
+          </div>
+          <div className="h-32  w-full  bg-gray-100 flex flex-col justify-center px-4 ">
+            <p className="capitalize md:text-xl ">total price</p>
+            <p className="capitalize text-xl font-semibold">
+              Rs.{formatAmount(totalPrice)}
+            </p>
           </div>
         </div>
       </div>

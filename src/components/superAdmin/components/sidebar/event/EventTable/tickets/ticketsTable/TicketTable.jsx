@@ -328,8 +328,7 @@ const TicketTable = () => {
           </button>
         </div>
         <h1 className="md:text-3xl text-xl font-semibold -mt-8 md:-mt-6">
-          {eventName}{" "}
-          <span className="md:text-xl text-base capitalize">(ticket)</span>
+          {eventName} <span className="md:text-xl text-base capitalize"></span>
         </h1>
       </div>
 

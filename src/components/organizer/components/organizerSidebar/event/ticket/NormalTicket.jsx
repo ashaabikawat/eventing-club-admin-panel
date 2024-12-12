@@ -321,8 +321,7 @@ const NormalTicket = () => {
             bulkTicketCreationCheck ? "mt-6" : "-mt-6"
           }`}
         >
-          {eventName}{" "}
-          <span className="md:text-xl text-base capitalize">(ticket)</span>
+          {eventName} <span className="md:text-xl text-base capitalize"></span>
         </h1>
       </div>
 
