@@ -323,6 +323,46 @@ const BannerEdit = () => {
   //     },
   //   });
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("BannerSlider_id", id);
+
+    if (selectedEventNames) {
+      formData.append("Event_id", selectedEventNames);
+    }
+
+    try {
+      let response = await axios.post(`${banner.UPDATE_BY_ID}`, formData);
+
+      toast.success(response.data.message);
+
+      setTimeout(() => {
+        navigate("/superAdmin/dashboard/banner");
+      }, 1000);
+    } catch (error) {
+      if (error.response) {
+        const { status, data } = error.response;
+
+        if (
+          status === 404 ||
+          status === 403 ||
+          status === 500 ||
+          status === 302 ||
+          status === 409 ||
+          status === 401 ||
+          status === 400
+        ) {
+          console.log(error.response);
+          toast.error(data.message);
+        }
+      }
+    }
+
+    console.log("selectedEventNames", selectedEventNames);
+    // navigate("/superAdmin/dashboard/banner");
+  };
+
   return (
     <>
       <Toaster />
@@ -344,21 +384,7 @@ const BannerEdit = () => {
         </div>
         <h1 className="md:text-3xl text-xl font-semibold -mt-2">Edit Banner</h1>
       </div>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          // if (selectedImage.length === null) {
-          //   toast.error("Please select at least one desktop image.");
-          //   return;
-          // }
-
-          // if (selectedImageMobile.length === null) {
-          //   toast.error("Please select at least one mobile image.");
-          //   return;
-          // }
-          navigate("/superAdmin/dashboard/banner");
-        }}
-      >
+      <form onSubmit={handleSubmit}>
         <div className="flex md:flex-row flex-col gap-8 md:gap-52">
           <div className="">
             <div className="m-4 text-start">
