@@ -17,7 +17,7 @@ import {
   setPromoterSignupData,
   setToken,
 } from "../../../../slices/promoterAuthSlice";
-import logo from "../../../../../public/TicketEventingClubLogo.png";
+import logo from "../../../../../public/EC Logo Black Name (1).svg";
 
 const PromoterSideBar = () => {
   const [isOpen, setIsOpen] = useState(false);

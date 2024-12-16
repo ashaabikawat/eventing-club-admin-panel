@@ -22,7 +22,7 @@ import { GrDocumentUser } from "react-icons/gr";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { MdEventSeat } from "react-icons/md";
 import { handleLogout } from "../../../../reducer/persistorStore/reduxstore";
-import logo from "../../../../../public/TicketEventingClubLogo.png";
+import logo from "../../../../../public/EC Logo Black Name (1).svg";
 import { FaImage } from "react-icons/fa";
 import { MdOutlineQrCodeScanner } from "react-icons/md";
 import { RiCouponLine } from "react-icons/ri";
@@ -103,7 +103,11 @@ const SideBar = () => {
                 to="/superAdmin/dashboard/event"
                 className="flex items-center flex-shrink-0 text-xl text-gray-800  my-2"
               >
-                <img src={logo} className="h-full mr-5 sm:h-14" alt="Logo" />
+                <img
+                  src={logo}
+                  className="h-full w-52 mr-5 sm:h-14"
+                  alt="Logo"
+                />
               </NavLink>
             </div>
             <ul className="space-y-2 font-medium">

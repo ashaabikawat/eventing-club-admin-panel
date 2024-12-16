@@ -16,7 +16,7 @@ import {
   setOrganizerSignupData,
   setToken,
 } from "../../../../slices/organizerAuthSlice";
-import logo from "../../../../../public/TicketEventingClubLogo.png";
+import logo from "../../../../../public/EC Logo Black Name (1).svg";
 import { IoMdClose } from "react-icons/io";
 const OrganizerSideBar = () => {
   const navigate = useNavigate();
