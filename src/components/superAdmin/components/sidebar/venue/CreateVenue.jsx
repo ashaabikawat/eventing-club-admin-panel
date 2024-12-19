@@ -7,12 +7,18 @@ import { venueObjectSchema } from "../../../validation/YupValidation";
 import { venueEndPoint } from "../../../../../services/apis";
 import AddAddress from "../../../../common/AddAddress";
 import { BiSolidImageAdd } from "react-icons/bi";
+import Select from "react-select";
+import { priority } from "../../../../common/helper/Enum";
 
 const CreateVenue = ({ setVenueCrationModal }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [images, setImages] = useState([]);
   const [allImageFile, setAllImageFile] = useState([]);
   const [imageUrl, setImageUrl] = useState();
+  const [venuePriority, setVenuePriority] = useState({
+    value: 0,
+    label: "0",
+  });
 
   // Address State
   const [stateIsoCode, setStateIsoCode] = useState(null);
@@ -56,6 +62,12 @@ const CreateVenue = ({ setVenueCrationModal }) => {
       formData.append("StateIsoCode", stateIsoCode);
       formData.append("City", cityName);
       formData.append("CityIsoCode", cityIsoCode);
+
+      if (venuePriority?.value) {
+        formData.append("Priority", venuePriority?.value);
+      } else {
+        formData.append("Priority", 0);
+      }
 
       try {
         let response = await axios.post(
@@ -166,6 +178,15 @@ const CreateVenue = ({ setVenueCrationModal }) => {
     const filteredImages1 = images.filter((image, i) => i !== imageObj);
     setAllImageFile(filteredImages);
     setImages(filteredImages1);
+  };
+
+  const dropdownStyles = {
+    control: (styles) => ({ ...styles, marginBottom: "1rem" }),
+    menuList: (styles) => ({
+      ...styles,
+      maxHeight: "170px", // Limit the height of the dropdown
+      overflowY: "auto", // Add a scrollbar
+    }),
   };
 
   return (
@@ -284,6 +305,26 @@ const CreateVenue = ({ setVenueCrationModal }) => {
                   {errors.venueName}
                 </p>
               ) : null}
+            </div>
+
+            <div className="md:col-span-2">
+              <label
+                htmlFor="name"
+                className="block mb-2 text-start text-sm font-medium text-gray-900 "
+              >
+                Priority
+              </label>
+              <Select
+                styles={dropdownStyles}
+                options={priority.map((priority) => ({
+                  value: priority.id,
+                  label: priority.id,
+                }))}
+                value={venuePriority}
+                onChange={setVenuePriority}
+                isClearable
+                placeholder="Select Venue Priority"
+              />
             </div>
 
             {/* venue Description*/}

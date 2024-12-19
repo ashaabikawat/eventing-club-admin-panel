@@ -9,6 +9,8 @@ import { useFormik } from "formik";
 import { venueObjectSchema } from "../../../validation/YupValidation";
 import EditAddress from "../../../../common/EditAddress";
 import { BiSolidImageAdd } from "react-icons/bi";
+import Select from "react-select";
+import { priority } from "../../../../common/helper/Enum";
 
 const EditVenue = () => {
   const { _id } = useParams();
@@ -29,6 +31,14 @@ const EditVenue = () => {
   const [cityIsoCode, setCityIsoCode] = useState();
   const [cityName, setCityName] = useState();
 
+  const dropdownStyles = {
+    control: (styles) => ({ ...styles, marginBottom: "1rem" }),
+    menuList: (styles) => ({
+      ...styles,
+      maxHeight: "170px", // Limit the height of the dropdown
+      overflowY: "auto", // Add a scrollbar
+    }),
+  };
   useEffect(() => {
     getVenueDataById();
   }, []);
@@ -81,6 +91,7 @@ const EditVenue = () => {
         venueDescription: "",
         venueAddress: "",
         venueMapLocation: "",
+        venuePriority: "",
       }
     : {
         venueName: venueData?.Name,
@@ -88,6 +99,7 @@ const EditVenue = () => {
         venueAddress: venueData.Address,
         venueMapLocation: venueData?.Map_Location,
         genreImage: venueData?.Image,
+        venuePriority: venueData?.Priority,
       };
 
   const {
@@ -115,15 +127,19 @@ const EditVenue = () => {
         StateIsoCode: stateIsoCode,
         City: cityName,
         CityIsoCode: String(cityIsoCode),
+        Priority: values.venuePriority,
       };
 
-      console.log("payload", payload);
+      if (values.venuePriority === null) {
+        payload.Priority = 0;
+      }
 
       if (genreImage.length === 0) {
         toast.error("Please select at least one image to display");
         return;
       }
 
+      console.log("payload", payload);
       try {
         let response = await axios.post(
           `${venueEndPoint.VENUE_DATA_UPDATED}`,
@@ -447,7 +463,41 @@ const EditVenue = () => {
                   </p>
                 ) : null}
               </div>
-
+              <div className="md:col-span-2">
+                <label
+                  htmlFor="name"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
+                >
+                  Priority
+                </label>
+                <Select
+                  id="venuePriority"
+                  name="venuePriority"
+                  styles={dropdownStyles}
+                  options={priority.map((priority) => ({
+                    value: priority.id,
+                    label: priority.id,
+                  }))}
+                  value={
+                    priority.find((p) => p.id === values?.venuePriority)
+                      ? {
+                          label: priority.find(
+                            (p) => p.id === values.venuePriority
+                          ).id,
+                          value: values.venuePriority,
+                        }
+                      : null
+                  }
+                  onChange={(selectedOption) =>
+                    setFieldValue(
+                      "venuePriority",
+                      selectedOption?.value || null
+                    )
+                  }
+                  isClearable
+                  placeholder="Select Venue Priority"
+                />
+              </div>
               {/* Artist Description*/}
               <div className="md:col-span-2 mb-4">
                 <label
