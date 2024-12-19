@@ -8,6 +8,8 @@ import toast, { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
 import { categoriesObjectSchema } from "../../../validation/YupValidation";
 import { BiSolidImageAdd } from "react-icons/bi";
+import Select from "react-select";
+import { priority } from "../../../../common/helper/Enum";
 
 export const EditCategorie = () => {
   const { _id } = useParams();
@@ -68,11 +70,13 @@ export const EditCategorie = () => {
     ? {
         categorieName: "",
         categorieDescription: "",
+        categoriePriority: "",
       }
     : {
         categorieName: categoryData?.Name,
         categorieDescription: categoryData?.Description,
         categorieImage: categoryData?.Image,
+        categoriePriority: categoryData?.Priority,
       };
 
   const {
@@ -92,7 +96,12 @@ export const EditCategorie = () => {
         category_id: _id,
         Name: values.categorieName,
         Description: values.categorieDescription,
+        Priority: values.categoriePriority,
       };
+
+      if (values.categoriePriority === null) {
+        payload.Priority = 0;
+      }
 
       if (categoryImages.length === 0) {
         toast.error("Please select at least one image to display");
@@ -130,6 +139,14 @@ export const EditCategorie = () => {
     },
   });
 
+  const dropdownStyles = {
+    control: (styles) => ({ ...styles, marginBottom: "1rem" }),
+    menuList: (styles) => ({
+      ...styles,
+      maxHeight: "170px", // Limit the height of the dropdown
+      overflowY: "auto", // Add a scrollbar
+    }),
+  };
   // Image Selection
   // const handleFileChange = (e) => {
   //   const file = e.target.files[0];
@@ -417,6 +434,42 @@ export const EditCategorie = () => {
                     {errors.categorieName}
                   </p>
                 ) : null}
+              </div>
+
+              <div className="md:col-span-2">
+                <label
+                  htmlFor="name"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
+                >
+                  Priority
+                </label>
+                <Select
+                  id=" categoriePriority"
+                  name=" categoriePriority"
+                  styles={dropdownStyles}
+                  options={priority.map((priority) => ({
+                    value: priority.id,
+                    label: priority.id,
+                  }))}
+                  value={
+                    priority.find((p) => p.id === values?.categoriePriority)
+                      ? {
+                          label: priority.find(
+                            (p) => p.id === values.categoriePriority
+                          ).id,
+                          value: values.categoriePriority,
+                        }
+                      : null
+                  }
+                  onChange={(selectedOption) =>
+                    setFieldValue(
+                      "categoriePriority",
+                      selectedOption?.value || null
+                    )
+                  }
+                  isClearable
+                  placeholder="Select Category Priority"
+                />
               </div>
 
               {/* Artist Description*/}

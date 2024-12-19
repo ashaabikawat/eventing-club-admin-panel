@@ -2,16 +2,22 @@ import { useState } from "react";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
+import Select from "react-select";
 import { useFormik } from "formik";
 import { categoriesObjectSchema } from "../../../validation/YupValidation";
 import { categorieEndPoint } from "../../../../../services/apis";
 import { BiSolidImageAdd } from "react-icons/bi";
+import { priority } from "../../../../common/helper/Enum";
 
 const CreateCategories = ({ setcategorieCrationModal }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [images, setImages] = useState([]);
   const [allImageFile, setAllImageFile] = useState([]);
   const [imageUrl, setImageUrl] = useState();
+  const [categoryPriority, setCategoryPriority] = useState({
+    value: 0,
+    label: "0",
+  });
 
   const initialValues = {
     categorieName: "",
@@ -37,6 +43,12 @@ const CreateCategories = ({ setcategorieCrationModal }) => {
       });
       formData.append("Name", values.categorieName);
       formData.append("Description", values.categorieDescription);
+
+      if (categoryPriority?.value) {
+        formData.append("Priority", categoryPriority?.value);
+      } else {
+        formData.append("Priority", 0);
+      }
 
       try {
         let response = await axios.post(
@@ -147,6 +159,14 @@ const CreateCategories = ({ setcategorieCrationModal }) => {
     const filteredImages1 = images.filter((image, i) => i !== imageObj);
     setAllImageFile(filteredImages);
     setImages(filteredImages1);
+  };
+  const dropdownStyles = {
+    control: (styles) => ({ ...styles, marginBottom: "1rem" }),
+    menuList: (styles) => ({
+      ...styles,
+      maxHeight: "170px", // Limit the height of the dropdown
+      overflowY: "auto", // Add a scrollbar
+    }),
   };
 
   return (
@@ -265,6 +285,26 @@ const CreateCategories = ({ setcategorieCrationModal }) => {
                   {errors.categorieName}
                 </p>
               ) : null}
+            </div>
+
+            <div className="md:col-span-2">
+              <label
+                htmlFor="name"
+                className="block mb-2 text-start text-sm font-medium text-gray-900 "
+              >
+                Priority
+              </label>
+              <Select
+                styles={dropdownStyles}
+                options={priority.map((priority) => ({
+                  value: priority.id,
+                  label: priority.id,
+                }))}
+                value={categoryPriority}
+                onChange={setCategoryPriority}
+                isClearable
+                placeholder="Select Category Priority"
+              />
             </div>
 
             {/* Artist Description*/}
