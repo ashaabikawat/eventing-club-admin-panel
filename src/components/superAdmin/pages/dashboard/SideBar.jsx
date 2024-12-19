@@ -66,7 +66,7 @@ const SideBar = () => {
           data-drawer-toggle="sidebar-multi-level-sidebar"
           aria-controls="sidebar-multi-level-sidebar"
           type="button"
-          className="inline-flex items-center border border-gray-400 p-2 mt-2  ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-mildBlue focus:outline-none focus:ring-2 focus:ring-gray-200 "
+          className="inline-flex items-center border border-gray-400 p-2 mt-2  ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-hoverColor focus:outline-none focus:ring-2 focus:ring-gray-200 "
           // className="inline-flex justify-end  w-full items-center p-2 mt-2  text-sm rounded-lg sm:hidden   "
           onClick={toggleSidebar}
         >
@@ -115,7 +115,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5 flex items-center w-full p-2 border-b-2 pb-4 text-white transition duration-75 rounded-lg group hover:bg-mildBlue dark:text-white dark:hover:bg-gray-700"
+                    className="px-5 flex items-center w-full p-2 border-b-2 pb-4 text-white transition duration-75 rounded-lg group hover:bg-hoverColor dark:text-white dark:hover:bg-gray-700"
                     aria-controls="dropdown-example"
                   >
                     <GrDocumentUser />
@@ -131,7 +131,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="flex items-center text-center w-full text-white p-2 px-5 transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className="flex items-center text-center w-full text-white p-2 px-5 transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -147,7 +147,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5 flex items-center w-full p-2  text-white transition duration-75 rounded-lg group hover:bg-mildBlue  "
+                    className="px-5 flex items-center w-full p-2  text-white transition duration-75 rounded-lg group hover:bg-hoverColor  "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -163,7 +163,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -179,7 +179,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5 flex items-center  w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className="px-5 flex items-center  w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -196,7 +196,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -212,7 +212,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className=" px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue  "
+                    className=" px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor  "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -229,7 +229,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className=" px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className=" px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -246,7 +246,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className=" px-5  flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className=" px-5  flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -263,7 +263,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5  flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className="px-5  flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -280,7 +280,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue dark:text-white dark:hover:bg-gray-700"
+                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor dark:text-white dark:hover:bg-gray-700"
                     aria-controls="dropdown-example"
                   >
                     <GrUserWorker size={20} />
@@ -296,7 +296,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className=" px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className=" px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -312,7 +312,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className=" px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className=" px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -329,7 +329,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -346,7 +346,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -363,7 +363,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -380,7 +380,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -397,7 +397,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue "
+                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor "
                     aria-controls="dropdown-example"
                     onClick={toggleSidebar}
                   >
@@ -427,7 +427,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue dark:text-white dark:hover:bg-gray-700"
+                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor dark:text-white dark:hover:bg-gray-700"
                     aria-controls="dropdown-example"
                   >
                     <FaQuestion size={20} />
@@ -442,7 +442,7 @@ const SideBar = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-mildBlue dark:text-white dark:hover:bg-gray-700"
+                    className="px-5 flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-hoverColor dark:text-white dark:hover:bg-gray-700"
                     aria-controls="dropdown-example"
                   >
                     <ImPriceTags size={20} />

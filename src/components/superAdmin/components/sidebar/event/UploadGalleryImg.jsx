@@ -156,7 +156,7 @@ const UploadGalleryImg = ({ setGalleryImages }) => {
             <button
               onClick={handleAddClick}
               type="button"
-              className="mr-[2%] px-6 py-2 bg-strongBlue hover:bg-mildBlue text-white rounded-md "
+              className="mr-[2%] px-6 py-2 bg-Gray40 text-white rounded-md "
             >
               upload Image
             </button>

@@ -1432,7 +1432,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                     <button
                       onClick={handleAddClick}
                       type="button"
-                      className="mr-[2%] px-3 py-2 hover:bg-mildBlue bg-strongBlue rounded-md text-white"
+                      className="mr-[2%] px-3 py-2 hover:bg-mildBlue bg-Gray40 rounded-md text-white"
                     >
                       upload Image
                     </button>
@@ -1643,9 +1643,9 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       type="button"
                       className={`w-[15%] py-2 ${
                         selectedLocationType === "venue"
-                          ? "bg-strongBlue rounded-md"
-                          : "bg-mildBlue rounded-md"
-                      } text-white`}
+                          ? "bg-blue-500 rounded-md"
+                          : "bg-Gray40 rounded-md"
+                      } text-white `}
                       onClick={() => handleLocationTypeChange("venue")}
                     >
                       Venue
@@ -1654,8 +1654,8 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       type="button"
                       className={`w-[35%] py-2 ${
                         selectedLocationType === "online"
-                          ? "bg-strongBlue rounded-md"
-                          : "bg-mildBlue rounded-md"
+                          ? "bg-blue-500 rounded-md"
+                          : "bg-Gray40 rounded-md"
                       } text-white`}
                       onClick={() => handleLocationTypeChange("online")}
                     >
@@ -1665,8 +1665,8 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       type="button"
                       className={`w-[45%] py-2 ${
                         selectedLocationType === "tba"
-                          ? "bg-strongBlue rounded-md"
-                          : "bg-mildBlue rounded-md"
+                          ? "bg-blue-500 rounded-md"
+                          : "bg-Gray40 rounded-md"
                       } text-white`}
                       onClick={() => handleLocationTypeChange("tba")}
                     >
@@ -2357,7 +2357,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
 
                   <div className="w-[95%] flex justify-end items-end mt-5 mb-3  pb-4">
                     <button
-                      className="px-5 py-2 text-white bg-strongBlue hover:bg-mildBlue rounded-md "
+                      className="px-5 py-2 text-white bg-Gray40 hover:bg-mildBlue rounded-md "
                       type="button"
                       onClick={() => handleSave()}
                     >
@@ -2416,7 +2416,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                   <div className="w-[94%] mx-auto pb-4">
                     <button
                       onClick={() => setShowCreateFaqModal(true)}
-                      className="px-4 py-2 mt-4 bg-strongBlue hover:bg-mildBlue rounded-md  text-white"
+                      className="px-4 py-2 mt-4 bg-Gray40 rounded-md  text-white"
                       type="button"
                     >
                       Add FAQ
@@ -2498,14 +2498,14 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
 
               <div className="flex  w-[100%] justify-end mt-[6%]">
                 <button
-                  className="py-2.5 px-3 bg-strongBlue hover:bg-mildBlue text-white rounded-md mr-[7%]"
+                  className="py-2.5 px-3 bg-Gray40 text-white rounded-md mr-[7%]"
                   type="button"
                   onClick={() => HandlerEventStatus(EventStatus.Draft)}
                 >
                   Save as draft
                 </button>
                 <button
-                  className="py-2.5 px-3 bg-strongBlue hover:bg-mildBlue text-white rounded-md"
+                  className="py-2.5 px-3 bg-Gray40 text-white rounded-md"
                   type="button"
                   onClick={() => HandlerEventStatus(EventStatus.Published)}
                 >

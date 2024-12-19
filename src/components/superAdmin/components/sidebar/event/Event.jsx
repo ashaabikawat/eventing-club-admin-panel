@@ -82,8 +82,8 @@ const Event = () => {
             // onClick={() => handlerMange("1")}
             className={`w-[25%] py-2 ${
               eventCreationModal
-                ? " bg-ctaBlue text-white "
-                : "bg-ctaBlue text-white"
+                ? " border-[1px] border-gray-600 text-black "
+                : "bg-Gray40  text-white"
             } flex justify-center items-center md:text-xl rounded-md`}
           >
             {/* <span className="mr-2">
@@ -141,8 +141,8 @@ const Event = () => {
                 <button
                   className={` px-2 py-1 ${
                     event.EventType === selectedEventType
-                      ? "bg-strongBlue text-white px-2 py-1 rounded-md"
-                      : "hover:bg-mildBlue  hover:text-white px-2 py-1 rounded-md transition-all ease-in-out"
+                      ? "bg-gray-500  text-white px-2 py-1 rounded-md"
+                      : "hover:bg-gray-500  hover:text-white px-2 py-1 rounded-md transition-all ease-in-out"
                   } `}
                   onClick={() => setSelectedEventType(event.EventType)}
                 >
@@ -178,14 +178,14 @@ const Event = () => {
                 <button
                   type="button"
                   onClick={() => HandlerCreatePage(EventFormat.EventTour)}
-                  className="w-[48%] py-2 bg-strongBlue hover:bg-mildBlue rounded-md text-white"
+                  className="w-[48%] py-2 bg-activeTab hover:bg-hoverTab rounded-md text-white"
                 >
                   Event Tour
                 </button>
                 <button
                   type="button"
                   onClick={() => HandlerCreatePage(EventFormat.StandardEvent)}
-                  className="w-[48%] py-2 bg-strongBlue hover:bg-mildBlue rounded-md text-white"
+                  className="w-[48%] py-2 bg-activeTab hover:bg-hoverTab rounded-md text-white"
                 >
                   Standard Event
                 </button>
