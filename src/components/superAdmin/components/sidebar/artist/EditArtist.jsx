@@ -8,6 +8,8 @@ import toast, { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
 import { artistCreationObjectSchema } from "../../../validation/YupValidation";
 import { BiSolidImageAdd } from "react-icons/bi";
+import Select from "react-select";
+import { priority } from "../../../../common/helper/Enum";
 
 const EditArtist = () => {
   const { _id } = useParams();
@@ -22,6 +24,14 @@ const EditArtist = () => {
   const [imageUrl, setImageUrl] = useState();
   const [selectedImage, setSelectedImage] = useState(null);
 
+  const dropdownStyles = {
+    control: (styles) => ({ ...styles, marginBottom: "1rem" }),
+    menuList: (styles) => ({
+      ...styles,
+      maxHeight: "170px", // Limit the height of the dropdown
+      overflowY: "auto", // Add a scrollbar
+    }),
+  };
   useEffect(() => {
     getArtistDataById();
   }, []);
@@ -69,6 +79,7 @@ const EditArtist = () => {
         artistemailId: "",
         artistDescription: "",
         artistPhoneNumber: "",
+        artistPriority: "",
       }
     : {
         artistName: artistData?.Name,
@@ -76,8 +87,8 @@ const EditArtist = () => {
         artistPhoneNumber: artistData?.PhoneNo,
         artistDescription: artistData?.Description,
         artistImage: artistData?.Image,
+        artistPriority: artistData?.Priority,
       };
-  console.log(artistImage);
 
   const {
     values,
@@ -99,12 +110,17 @@ const EditArtist = () => {
         Email: values.artistemailId,
         Description: values.artistDescription,
         PhoneNo: values.artistPhoneNumber,
+        Priority: values.artistPriority,
       };
 
+      if (values.artistPriority === null) {
+        payload.Priority = 0;
+      }
       if (artistImage.length === 0) {
         toast.error("Please select at least one image to display");
         return;
       }
+      console.log(payload);
 
       try {
         let response = await axios.post(
@@ -243,6 +259,7 @@ const EditArtist = () => {
     }
   };
 
+  console.log("priority", values.artistPriority);
   //   Remove Artist Image
   const handlerRemoveImage = async (imageData) => {
     try {
@@ -425,6 +442,41 @@ const EditArtist = () => {
                     {errors.artistName}
                   </p>
                 ) : null}
+              </div>
+              <div className="md:col-span-2">
+                <label
+                  htmlFor="name"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
+                >
+                  Priority
+                </label>
+                <Select
+                  id="artistPriority"
+                  name="artistPriority"
+                  styles={dropdownStyles}
+                  options={priority.map((priority) => ({
+                    value: priority.id,
+                    label: priority.id,
+                  }))}
+                  value={
+                    priority.find((p) => p.id === values?.artistPriority)
+                      ? {
+                          label: priority.find(
+                            (p) => p.id === values.artistPriority
+                          ).id,
+                          value: values.artistPriority,
+                        }
+                      : null
+                  }
+                  onChange={(selectedOption) =>
+                    setFieldValue(
+                      "artistPriority",
+                      selectedOption?.value || null
+                    )
+                  }
+                  isClearable
+                  placeholder="Select Artist Priority"
+                />
               </div>
 
               {/* Email ID Artist  */}

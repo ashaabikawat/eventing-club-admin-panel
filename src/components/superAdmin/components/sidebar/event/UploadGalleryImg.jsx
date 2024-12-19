@@ -148,7 +148,7 @@ const UploadGalleryImg = ({ setGalleryImages }) => {
               </div>
             </label>
           </div>
-          <div className="flex w-[95%] justify-between mx-auto mt-[2%]">
+          <div className="flex w-[95%] justify-between items-center mx-auto mt-[2%]">
             <div className="flex flex-col">
               <p className="py-2">Only PNG or JPG Files. 500 kb max size</p>
               <p>Dimensions - 612x408</p>
@@ -156,7 +156,7 @@ const UploadGalleryImg = ({ setGalleryImages }) => {
             <button
               onClick={handleAddClick}
               type="button"
-              className="mr-[2%] px-6 py-2 bg-Gray85"
+              className="mr-[2%] px-6 py-2 bg-strongBlue hover:bg-mildBlue text-white rounded-md "
             >
               upload Image
             </button>

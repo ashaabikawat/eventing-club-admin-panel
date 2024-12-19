@@ -1349,7 +1349,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
   // console.log({errors})
 
   return (
-    <>
+    <div>
       <Toaster />
       <form
         onSubmit={(e) => {
@@ -1422,8 +1422,8 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       </div>
                     </label>
                   </div>
-                  <div className="flex w-[95%] justify-between mx-auto mt-[2%]">
-                    <div className="flex flex-col">
+                  <div className="flex w-[95%] items-center justify-between mx-auto mt-[2%]">
+                    <div className="flex flex-col ">
                       <p className="py-2">
                         Only PNG or JPG Files. 500 kb max size
                       </p>
@@ -1432,7 +1432,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                     <button
                       onClick={handleAddClick}
                       type="button"
-                      className="mr-[2%] px-6 py-2 bg-Gray85"
+                      className="mr-[2%] px-3 py-2 hover:bg-mildBlue bg-strongBlue rounded-md text-white"
                     >
                       upload Image
                     </button>
@@ -1643,8 +1643,8 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       type="button"
                       className={`w-[15%] py-2 ${
                         selectedLocationType === "venue"
-                          ? "bg-blue-500"
-                          : "bg-Gray40"
+                          ? "bg-strongBlue rounded-md"
+                          : "bg-mildBlue rounded-md"
                       } text-white`}
                       onClick={() => handleLocationTypeChange("venue")}
                     >
@@ -1654,8 +1654,8 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       type="button"
                       className={`w-[35%] py-2 ${
                         selectedLocationType === "online"
-                          ? "bg-blue-500"
-                          : "bg-Gray40"
+                          ? "bg-strongBlue rounded-md"
+                          : "bg-mildBlue rounded-md"
                       } text-white`}
                       onClick={() => handleLocationTypeChange("online")}
                     >
@@ -1665,8 +1665,8 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       type="button"
                       className={`w-[45%] py-2 ${
                         selectedLocationType === "tba"
-                          ? "bg-blue-500"
-                          : "bg-Gray40"
+                          ? "bg-strongBlue rounded-md"
+                          : "bg-mildBlue rounded-md"
                       } text-white`}
                       onClick={() => handleLocationTypeChange("tba")}
                     >
@@ -1691,7 +1691,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       </div>
                     </div>
                     <select
-                      className="bg-gray-100 border border-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-1"
+                      className="bg-gray-100 border border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-1"
                       onChange={(e) => {
                         const selectedValue = e.target.value;
                         console.log({ selectedValue });
@@ -1754,7 +1754,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       value={values.onlineEventUrl}
                       onChange={handleChange}
                       name="onlineEventUrl"
-                      className="bg-gray-100 border border-black text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-1"
+                      className="bg-gray-100 border border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-1"
                     />
                   </div>
                 )}
@@ -1777,14 +1777,14 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                 {/* Organizers Div */}
                 <div>
                   <div className="mt-3">
-                    <p className="text-black font-semibold text-lg mb-1">
+                    <p className="text-black font-semibold text-lg mb-1 ">
                       Organizers*
                     </p>
                     <Select
                       isMulti
                       name="colors"
                       options={AllorganizerData}
-                      className="basic-multi-select bg-Gray40"
+                      className="basic-multi-select "
                       classNamePrefix="select organizer"
                       onChange={handleSelectChangeOrganizer}
                       value={selectedOptions}
@@ -1809,7 +1809,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       // isMulti
                       name="colors"
                       options={allCategoriesData}
-                      className="basic-multi-select bg-Gray40"
+                      className="basic-multi-select "
                       classNamePrefix="select organizer"
                       onChange={handleSelectChangeCategory}
                       value={selectedOptionsForCategory}
@@ -1857,7 +1857,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       isMulti
                       name="colors"
                       options={allArtistData}
-                      className="basic-multi-select bg-Gray40"
+                      className="basic-multi-select "
                       classNamePrefix="select organizer"
                       onChange={handleSelectChangeArtist}
                       value={selectedOptionsForArtist}
@@ -1882,7 +1882,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       isMulti
                       name="colors"
                       options={allGenreData}
-                      className="basic-multi-select bg-Gray40"
+                      className="basic-multi-select "
                       classNamePrefix="select Genre"
                       onChange={handleSelectChangeGenre}
                       value={selectedOptionsForGenre}
@@ -1932,7 +1932,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                     isMulti
                     name="language"
                     options={indianLanguages}
-                    className="basic-single-select bg-Gray40"
+                    className="basic-single-select "
                     classNamePrefix="select language"
                     onChange={handleLanguageChange}
                     value={selectedLanguage}
@@ -1953,7 +1953,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                     <Select
                       name="years"
                       options={yearsOptions}
-                      className="basic-single-select bg-Gray40"
+                      className="basic-single-select "
                       classNamePrefix="select years"
                       onChange={handleYearsChange}
                       value={selectedYears}
@@ -1989,7 +1989,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                     onBlur={handleBlur}
                     rows={2}
                     placeholder="Enter event link here"
-                    className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
+                    className="w-full bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
                   />
                   {errors.eventVideoUrl && touched.eventVideoUrl ? (
                     <p className="font-Marcellus text-start text-red-900">
@@ -2013,7 +2013,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       value={values.feeunit}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                      className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     >
                       {Object.keys(ConvinienceFeeUnit).map((key) => (
                         <option key={key} value={ConvinienceFeeUnit[key]}>
@@ -2042,7 +2042,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                       value={values.feevalue}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                      className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     />
                     {errors.feevalue && touched.feevalue ? (
                       <p className="font-Marcellus text-start text-red-900">
@@ -2357,7 +2357,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
 
                   <div className="w-[95%] flex justify-end items-end mt-5 mb-3  pb-4">
                     <button
-                      className="px-5 py-2 text-white bg-Gray40"
+                      className="px-5 py-2 text-white bg-strongBlue hover:bg-mildBlue rounded-md "
                       type="button"
                       onClick={() => handleSave()}
                     >
@@ -2416,7 +2416,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                   <div className="w-[94%] mx-auto pb-4">
                     <button
                       onClick={() => setShowCreateFaqModal(true)}
-                      className="px-4 py-3 mt-4 bg-Gray40 text-white"
+                      className="px-4 py-2 mt-4 bg-strongBlue hover:bg-mildBlue rounded-md  text-white"
                       type="button"
                     >
                       Add FAQ
@@ -2496,16 +2496,16 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
                 />
               )}
 
-              <div className="flex  w-[100%] justify-end mt-[3%]">
+              <div className="flex  w-[100%] justify-end mt-[6%]">
                 <button
-                  className="py-2.5 px-3 border-[1px] border-Gray85 mr-[7%]"
+                  className="py-2.5 px-3 bg-strongBlue hover:bg-mildBlue text-white rounded-md mr-[7%]"
                   type="button"
                   onClick={() => HandlerEventStatus(EventStatus.Draft)}
                 >
                   Save as draft
                 </button>
                 <button
-                  className="py-2.5 px-3 bg-Gray40 text-white"
+                  className="py-2.5 px-3 bg-strongBlue hover:bg-mildBlue text-white rounded-md"
                   type="button"
                   onClick={() => HandlerEventStatus(EventStatus.Published)}
                 >
@@ -2516,7 +2516,7 @@ const CreateEvent = ({ eventSelectionFlag, setEventCrationModal }) => {
           </div>
         </div>
       </form>
-    </>
+    </div>
   );
 };
 

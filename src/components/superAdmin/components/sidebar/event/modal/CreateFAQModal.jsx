@@ -184,7 +184,7 @@ const CreateFAQModal = ({ setShowCreateFaqModal, onNewFAQ }) => {
 
               <div className="w-[96%] flex justify-end items-end ">
                 <button
-                  className="px-5 py-2 text-white bg-Gray40"
+                  className="px-5 py-2 bg-strongBlue hover:bg-mildBlue text-white rounded-md"
                   type="button"
                   onClick={() => handlerSaveClick()}
                 >

@@ -6,6 +6,8 @@ import { useFormik } from "formik";
 import { artistEndpoints } from "../../../../../services/apis";
 import axios from "axios";
 import { BiSolidImageAdd } from "react-icons/bi";
+import Select from "react-select";
+import { priority } from "../../../../common/helper/Enum";
 // import { utils } from "xlsx";
 
 const CreateArtist = ({ setArtistCrationModal }) => {
@@ -13,7 +15,12 @@ const CreateArtist = ({ setArtistCrationModal }) => {
   const [images, setImages] = useState([]);
   const [allImageFile, setAllImageFile] = useState([]);
   const [imageUrl, setImageUrl] = useState();
-  console.log(allImageFile);
+
+  const [ArtistPriority, setArtistPriority] = useState({
+    value: 0,
+    label: "0",
+  });
+  console.log(ArtistPriority?.value);
   const initialValues = {
     artistName: "",
     artistemailId: "",
@@ -43,6 +50,12 @@ const CreateArtist = ({ setArtistCrationModal }) => {
       formData.append("Email", values.artistemailId);
       formData.append("Description", values.artistDescription);
       formData.append("PhoneNo", values.artistPhoneNumber);
+
+      if (ArtistPriority?.value) {
+        formData.append("Priority", ArtistPriority?.value);
+      } else {
+        formData.append("Priority", 0);
+      }
 
       if (allImageFile.length === 0) {
         toast.error("Please select at least one image");
@@ -168,6 +181,15 @@ const CreateArtist = ({ setArtistCrationModal }) => {
     setImages(filteredImages1);
   };
 
+  const dropdownStyles = {
+    control: (styles) => ({ ...styles, marginBottom: "1rem" }),
+    menuList: (styles) => ({
+      ...styles,
+      maxHeight: "170px", // Limit the height of the dropdown
+      overflowY: "auto", // Add a scrollbar
+    }),
+  };
+
   return (
     <div>
       {/* {console.log(errors)} */}
@@ -281,6 +303,26 @@ const CreateArtist = ({ setArtistCrationModal }) => {
                     {errors.artistName}
                   </p>
                 ) : null}
+              </div>
+
+              <div className="md:col-span-2">
+                <label
+                  htmlFor="name"
+                  className="block mb-2 text-start text-sm font-medium text-gray-900 "
+                >
+                  Priority
+                </label>
+                <Select
+                  styles={dropdownStyles}
+                  options={priority.map((priority) => ({
+                    value: priority.id,
+                    label: priority.id,
+                  }))}
+                  value={ArtistPriority}
+                  onChange={setArtistPriority}
+                  isClearable
+                  placeholder="Select Artist Priority"
+                />
               </div>
 
               {/* Email ID Artist  */}
