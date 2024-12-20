@@ -918,6 +918,9 @@ const All = ({
                 <th scope="col" className="px-4 py-3">
                   Check in
                 </th>
+                <th scope="col" className="px-4 py-3">
+                  Scanned by
+                </th>
                 <th scope="col" className="px-2 py-3">
                   Ticket Name
                 </th>
@@ -1002,6 +1005,11 @@ const All = ({
                       <td className="pl-10 py-4">{eventData.TicketQuantity}</td>
                       <td className="pl-6 py-4">
                         {eventData.CheckIn ? eventData.CheckIn : "-"}
+                      </td>
+                      <td className="pl-6 py-4">
+                        {eventData.ScannerUserName
+                          ? eventData.ScannerUserName
+                          : "-"}
                       </td>
                       <td className="pl-2 py-4">{eventData.TicketName}</td>
                       <td className="pl-10 py-4">

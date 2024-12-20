@@ -576,6 +576,9 @@ const Bulk = ({
                   Check In
                 </th>
                 <th scope="col" className="px-6 py-3">
+                  Scanned by
+                </th>
+                <th scope="col" className="px-6 py-3">
                   Ticket Price
                 </th>
                 <th scope="col" className="px-6 py-3">
@@ -642,6 +645,7 @@ const Bulk = ({
                     </td>
                     <td className="pl-10 py-4">{bulkData?.Quantity}</td>
                     <td className="pl-10 py-4">{bulkData?.CheckIn}</td>
+                    <td className="pl-10 py-4">{bulkData?.ScannerUserName}</td>
                     <td className="pl-5 py-4">{bulkData?.Price}</td>
                     <td className="pl-5 py-4">{bulkData?.TotalAmount}</td>
 
