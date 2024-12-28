@@ -641,7 +641,7 @@ const UpdateTicketByOrganizer = () => {
                   </span>
                 </p>
               </div> */}
-
+              {/* 
               <div>
                 <div className="">
                   <p className="text-black font-semibold text-base mb-1">
@@ -657,30 +657,31 @@ const UpdateTicketByOrganizer = () => {
                     value={selectedOptions}
                   />
                 </div>
+              </div> */}
+              <div className="mt-2">
+                <label
+                  htmlFor="promoters"
+                  className="block mb-2 text-start text-base font-medium text-gray-900"
+                >
+                  Promoters
+                </label>
+                <div className="bg-gray-50 border-gray-300 border rounded-md p-2">
+                  {selectedOptions?.map((promoter, index) => (
+                    <div
+                      className={`${
+                        index === selectedOptions?.length - 1
+                          ? "border-none"
+                          : "border-b-[1px]"
+                      } py-2 border-gray-300 `}
+                      key={index}
+                    >
+                      <p>{promoter.label}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-            // </div>
-            // <div className="mt-4">
-            //   <label
-            //     htmlFor="promoters"
-            //     className="block mb-2 text-start text-base font-medium text-gray-900 dark:text-white"
-            //   >
-            //     Promoters
-            //   </label>
-            //   <div className="bg-gray-50 border-gray-300 border rounded-md p-2">
-            //     {selectedOptions?.map((promoter, index) => (
-            //       <div
-            //         className={`${
-            //           index === selectedOptions?.length - 1
-            //             ? "border-none"
-            //             : "border-b-[1px]"
-            //         } py-2 border-gray-300 `}
-            //         key={index}
-            //       >
-            //         <p>{promoter.label}</p>
-            //       </div>
-            //     ))}
-            //   </div>
+
             // </div>
           )}
 

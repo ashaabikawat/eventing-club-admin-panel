@@ -427,7 +427,7 @@ const EventTicketsBooking = () => {
               </div>
             </div>
 
-            <div className="mt-6 w-full">
+            <div className="mt-6 w-full ">
               {eventTicketsData?.map((eventTicket, index) => {
                 const ticketId = eventTicket._id;
                 const description = eventTicket?.Description || "";
@@ -470,7 +470,7 @@ const EventTicketsBooking = () => {
                 return (
                   <div
                     key={index}
-                    className="bg-[#F5F5F5] w-full mt-2 p-4 mb-2 flex justify-between "
+                    className="bg-[#F5F5F5] w-full mt-2 p-4 mb-2 flex flex-col md:flex-row justify-between "
                   >
                     <div className="md:w-[70%]">
                       <h1 className="font-semibold text-xl">
@@ -493,27 +493,29 @@ const EventTicketsBooking = () => {
                           )
                         )}
                       </p> */}
-                      <p className="mt-3">
-                        {displayedLines.map((line, idx) => (
-                          <React.Fragment key={idx}>
-                            {line}
-                            <br />
-                          </React.Fragment>
-                        ))}
-                        {(description.length > maxChars ||
-                          descriptionLines.length > maxLines) && (
-                          <button
-                            onClick={() => toggleReadMore(ticketId)}
-                            className="text-black font-bold underline ml-1"
-                          >
-                            {isExpanded ? "Read Less" : "Read More"}
-                          </button>
-                        )}
-                      </p>
+                      {eventTicket?.Description !== null && (
+                        <p className="mt-3">
+                          {displayedLines.map((line, idx) => (
+                            <React.Fragment key={idx}>
+                              {line}
+                              <br />
+                            </React.Fragment>
+                          ))}
+                          {(description.length > maxChars ||
+                            descriptionLines.length > maxLines) && (
+                            <button
+                              onClick={() => toggleReadMore(ticketId)}
+                              className="text-black font-bold underline ml-1"
+                            >
+                              {isExpanded ? "Read Less" : "Read More"}
+                            </button>
+                          )}
+                        </p>
+                      )}
                     </div>
 
-                    <div className="w-[30%] flex flex-col justify-between ">
-                      <p className="text-center">Rs.{eventTicket.Price}</p>
+                    <div className="md:w-[30%] mt-2 md:mt-0 md:flex md:flex-col md:justify-between ">
+                      <p className="md:text-center">Rs.{eventTicket.Price}</p>
                       {showCount[eventTicket._id] ? (
                         <div className="flex justify-center items-center mt-4">
                           <button
