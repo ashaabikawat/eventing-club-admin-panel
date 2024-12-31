@@ -806,6 +806,9 @@ const PromoterEventReport = () => {
                     <th scope="col" className="px-6 py-3">
                       Total amount
                     </th>
+                    <th scope="col" className="px-6 py-3">
+                      Remark
+                    </th>
                     <th scope="col" className="px-4 py-3">
                       Status
                     </th>
@@ -866,6 +869,7 @@ const PromoterEventReport = () => {
                         <td className="pl-6 py-4">
                           {transactionData?.TotalAmount}
                         </td>
+                        <td className="pl-6 py-4">{transactionData?.Remark}</td>
                         <td className="pl-2 pr-14 py-4">
                           {transactionData.status !== bookingStatus.Booked
                             ? "Cancelled"

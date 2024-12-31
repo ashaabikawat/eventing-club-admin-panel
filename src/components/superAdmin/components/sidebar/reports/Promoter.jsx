@@ -950,6 +950,9 @@ const Promoter = ({
                 <th scope="col" className="px-8 py-3">
                   Total amount
                 </th>
+                <th scope="col" className="px-8 py-3">
+                  Remark
+                </th>
                 <th scope="col" className="px-4 py-3">
                   Status
                 </th>
@@ -1032,6 +1035,7 @@ const Promoter = ({
                       </td>
                       <td className="pl-6 py-4">{eventData.TicketPrice}</td>
                       <td className="pl-8 py-4">{eventData.TotalAmount}</td>
+                      <td className="pl-8 py-4">{eventData.Remark}</td>
 
                       <td className="pl-2 py-4">
                         {eventData.status !== bookingStatus.Booked
