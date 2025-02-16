@@ -877,6 +877,9 @@ const Online = ({ setSelectedEventType, selectedEventType }) => {
                 <th scope="col" className="px-8 py-3">
                   Total amount
                 </th>
+                <th scope="col" className="px-8 py-3">
+                  Remark
+                </th>
                 {/* <th scope="col" className="px-6 py-3">
                   Actions
                 </th> */}
@@ -962,6 +965,7 @@ const Online = ({ setSelectedEventType, selectedEventType }) => {
                       <td className="pl-8 py-4">{eventData.convenienceFee}</td>
                       <td className="pl-4 py-4">{eventData.GST}</td>
                       <td className="pl-8 py-4">{eventData.TotalAmount}</td>
+                      <td className="pl-8 py-4">{eventData.Remark}</td>
                       {/* <td className="pr-6 py-4">
                         <div className="flex gap-2">
                           <span

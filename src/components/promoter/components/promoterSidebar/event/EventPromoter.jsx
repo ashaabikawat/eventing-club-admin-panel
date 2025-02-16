@@ -69,7 +69,7 @@ const EventPromoter = () => {
     const arrangedEventDateTime = event.arrangedEventDateTime;
     const eventName = event.EventName;
     const seasonPass = event.SeasonPassCount;
-    const venueCity = event.VenueCity;
+    const venueCity = event.VenueName;
 
     navigate(`/promoter/dashboard/event/booking-tickets/${eventId}`, {
       state: {
@@ -388,7 +388,7 @@ const EventPromoter = () => {
                         <FaMapLocation size={23} />
                       </span>
                       {event.VenueEventFlag === 1
-                        ? event.VenueCity
+                        ? event.VenueName
                         : event.VenueToBeAnnounced === 1
                         ? event.VenueToBeAnnouncedCity
                         : "Online Event"}

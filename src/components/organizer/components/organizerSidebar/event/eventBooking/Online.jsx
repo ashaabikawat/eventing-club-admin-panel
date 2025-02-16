@@ -853,6 +853,9 @@ const Online = ({
                 <th scope="col" className="px-8 py-3">
                   Total amount
                 </th>
+                <th scope="col" className="px-8 py-3">
+                  Remark
+                </th>
                 <th scope="col" className="px-4 py-3">
                   Status
                 </th>
@@ -933,6 +936,7 @@ const Online = ({
                       <td className="pl-8 py-4">{eventData.convenienceFee}</td>
                       <td className="pl-4 py-4">{eventData.GST}</td>
                       <td className="pl-8 py-4">{eventData.TotalAmount}</td>
+                      <td className="pl-8 py-4">{eventData.Remark}</td>
                       {/* <td className="pr-6 py-4">
                         <div className="flex gap-2">
                           <span

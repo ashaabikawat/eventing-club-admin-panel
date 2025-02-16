@@ -6,9 +6,7 @@ const CustomToast = ({ setIsModalOpen, message, url, heading }) => {
   const handleToggle = () => {
     setIsModalOpen(false);
     if (url) {
-      return setTimeout(() => {
-        navigate(url);
-      }, 1000);
+      return navigate(url);
     } else {
       return;
     }
